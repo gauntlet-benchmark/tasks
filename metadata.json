@@ -1,0 +1,425 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "ml:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {"@id": "ml:data", "@type": "@json"},
+    "dataType": {"@id": "ml:dataType", "@type": "@vocab"},
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "ml:equivalentProperty",
+    "examples": {"@id": "ml:examples", "@type": "@json"},
+    "extract": "ml:extract",
+    "field": "ml:field",
+    "fileObject": "ml:fileObject",
+    "fileProperty": "ml:fileProperty",
+    "fileSet": "ml:fileSet",
+    "format": "ml:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "ml:isLiveDataset",
+    "jsonPath": "ml:jsonPath",
+    "key": "ml:key",
+    "md5": "ml:md5",
+    "ml": "http://mlcommons.org/schema/",
+    "sc": "https://schema.org/",
+    "parentField": "ml:parentField",
+    "path": "ml:path",
+    "rai": "ml:RAI",
+    "recordSet": "ml:recordSet",
+    "references": "ml:references",
+    "regex": "ml:regex",
+    "repeated": "ml:repeated",
+    "replace": "ml:replace",
+    "samplingRate": "ml:samplingRate",
+    "separator": "ml:separator",
+    "source": "ml:source",
+    "subField": "ml:subField",
+    "transform": "ml:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "GauntletBenchmark",
+  "description": "A multi-domain agent benchmark covering five task categories: Workflow Builder (n8n-style pipelines), 3D Modeller (Three.js scenes), Video Editor (browser-based timeline), Circuit Designer (CircuitJS), and Flight Analyser (ADS-B replay). Each category contains 20 tasks at easy, medium, and hard difficulty levels.",
+  "version": "1.0.0",
+  "citeAs": "GauntletBenchmark v1.0.0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "datePublished": "2025-05-06",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "distribution": [
+
+    {
+      "@type": "http://mlcommons.org/croissant/FileObject",
+      "@id": "workflow-builder-file",
+      "name": "workflow_builder",
+      "description": "Workflow Builder tasks YAML.",
+      "contentUrl": "tasks/workflow_builder.yaml",
+      "encodingFormat": "application/x-yaml",
+      "sha256": "f37a791816854f61c6c9f055b1d9516de1a1a302a1f9f242b7ae447ba5cadd02"
+    },
+    {
+      "@type": "http://mlcommons.org/croissant/FileSet",
+      "@id": "workflow-builder-gt-fileset",
+      "name": "workflow_builder_ground_truth_files",
+      "description": "Expected final workflow-graph state, one JSON file per task (task1.json–task20.json). Task number N corresponds to tc_graph_NNN. The gt field in the YAML is empty for Workflow Builder tasks; these files are the authoritative ground truth used by the evaluator.",
+      "encodingFormat": "application/json",
+      "includes": "assets/graph_ground_truth/task*.json"
+    },
+
+    {
+      "@type": "http://mlcommons.org/croissant/FileObject",
+      "@id": "3d-modeller-file",
+      "name": "3d_modeller",
+      "description": "3D Modeller tasks YAML.",
+      "contentUrl": "tasks/3d_modeller.yaml",
+      "encodingFormat": "application/x-yaml",
+      "sha256": "9270592ccde109ac50cbf0c906f768a8effa3b60e5296a4cfec73d6b803bd496"
+    },
+    {
+      "@type": "http://mlcommons.org/croissant/FileSet",
+      "@id": "3d-modeller-gt-fileset",
+      "name": "3d_modeller_ground_truth_files",
+      "description": "Expected final 3D scene state, one JSON file per task (task1.json–task20.json). Task number N corresponds to tc_3d_NNN. The gt field in the YAML is empty for 3D Modeller tasks; these files are the authoritative ground truth used by the evaluator.",
+      "encodingFormat": "application/json",
+      "includes": "assets/3d_ground_truth/task*.json"
+    },
+    {
+      "@type": "http://mlcommons.org/croissant/FileObject",
+      "@id": "3d-modeller-tolerance-overrides",
+      "name": "3d_modeller_tolerance_overrides",
+      "description": "JSON object mapping task numbers (string keys) to absolute numeric tolerances for floating-point scene-property comparison. Tasks absent from this file use the evaluator default tolerance. Currently overrides tasks 7 and 16 (tolerance 0.5).",
+      "contentUrl": "assets/3d_ground_truth/tolerance_overrides.json",
+      "encodingFormat": "application/json",
+      "sha256": "076087b98448fc0f1a98a544f0093b690c3043df0ba18326a0c8bce2efbe8bc7"
+    },
+
+    {
+      "@type": "http://mlcommons.org/croissant/FileObject",
+      "@id": "video-editor-file",
+      "name": "video_editor",
+      "description": "Video Editor tasks YAML.",
+      "contentUrl": "tasks/video_editor.yaml",
+      "encodingFormat": "application/x-yaml",
+      "sha256": "808535693526e57b8542c8ede3c10b61b98d96e7fe9a63e4fc45f35d05f8d09a"
+    },
+    {
+      "@type": "http://mlcommons.org/croissant/FileSet",
+      "@id": "video-editor-gt-fileset",
+      "name": "video_editor_ground_truth_files",
+      "description": "Expected editor-operations sequence, one JSON file per task (tc_vid_001.json–tc_vid_020.json). The filename matches the task id directly. The gt field in the YAML is empty for Video Editor tasks; these files are the authoritative ground truth used by the evaluator.",
+      "encodingFormat": "application/json",
+      "includes": "assets/video_ground_truth/tc_vid_*.json"
+    },
+
+    {
+      "@type": "http://mlcommons.org/croissant/FileObject",
+      "@id": "circuit-designer-file",
+      "name": "circuit_designer",
+      "description": "Circuit Designer tasks YAML.",
+      "contentUrl": "tasks/circuit_designer.yaml",
+      "encodingFormat": "application/x-yaml",
+      "sha256": "6fabf7db1da8bc082eea67896328d12175b0c6b6ec6234721df7c08c0cc559c1"
+    },
+
+    {
+      "@type": "http://mlcommons.org/croissant/FileObject",
+      "@id": "flight-analyser-file",
+      "name": "flight_analyser",
+      "description": "Flight Analyser tasks YAML.",
+      "contentUrl": "tasks/flight_analyser.yaml",
+      "encodingFormat": "application/x-yaml",
+      "sha256": "4ef8f7a623732cf0d165f7df438aa5ed069a07c7e3c26ae24fb64759fd820c71"
+    }
+
+  ],
+  "recordSet": [
+    {
+      "@type": "ml:RecordSet",
+      "@id": "workflow-builder-tasks",
+      "name": "workflow_builder_tasks",
+      "description": "20 Workflow Builder tasks (7 easy, 6 medium, 7 hard) targeting n8n-style pipelines.",
+      "key": "workflow-builder-tasks/id",
+      "field": [
+        {
+          "@type": "ml:Field",
+          "@id": "workflow-builder-tasks/id",
+          "name": "id",
+          "description": "Unique task identifier (tc_graph_001–tc_graph_020).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "workflow-builder-file"},
+            "extract": {"jsonPath": "$.tasks[*].id"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "workflow-builder-tasks/difficulty_level",
+          "name": "difficulty_level",
+          "description": "Task difficulty: easy | medium | hard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "workflow-builder-file"},
+            "extract": {"jsonPath": "$.tasks[*].difficulty_level"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "workflow-builder-tasks/prompt",
+          "name": "prompt",
+          "description": "Markdown task instruction shown to the agent, including goal, numbered steps, and expected JSON result format.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "workflow-builder-file"},
+            "extract": {"jsonPath": "$.tasks[*].prompt"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "workflow-builder-tasks/gt_asset_path",
+          "name": "gt_asset_path",
+          "description": "Relative path to the authoritative ground-truth JSON file for this task inside workflow-builder-gt-fileset. Derived from the task index: tc_graph_NNN -> assets/graph_ground_truth/taskN.json (leading zeros stripped). The inline gt field in the YAML is empty for all Workflow Builder tasks.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "workflow-builder-file"},
+            "extract": {"jsonPath": "$.tasks[*].id"},
+            "transform": {
+              "regex": "tc_graph_0*(\\d+)",
+              "replace": "assets/graph_ground_truth/task$1.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ml:RecordSet",
+      "@id": "3d-modeller-tasks",
+      "name": "3d_modeller_tasks",
+      "description": "20 3D Modeller tasks (2 easy, 10 medium, 8 hard) targeting a Three.js-based scene editor.",
+      "key": "3d-modeller-tasks/id",
+      "field": [
+        {
+          "@type": "ml:Field",
+          "@id": "3d-modeller-tasks/id",
+          "name": "id",
+          "description": "Unique task identifier (tc_3d_001–tc_3d_020).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "3d-modeller-file"},
+            "extract": {"jsonPath": "$.tasks[*].id"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "3d-modeller-tasks/difficulty_level",
+          "name": "difficulty_level",
+          "description": "Task difficulty: easy | medium | hard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "3d-modeller-file"},
+            "extract": {"jsonPath": "$.tasks[*].difficulty_level"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "3d-modeller-tasks/prompt",
+          "name": "prompt",
+          "description": "Markdown task instruction shown to the agent, including goal, numbered steps, and expected JSON result format.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "3d-modeller-file"},
+            "extract": {"jsonPath": "$.tasks[*].prompt"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "3d-modeller-tasks/gt_asset_path",
+          "name": "gt_asset_path",
+          "description": "Relative path to the authoritative ground-truth JSON file for this task inside 3d-modeller-gt-fileset. Derived from the task index: tc_3d_NNN -> assets/3d_ground_truth/taskN.json (leading zeros stripped). The inline gt field in the YAML is empty for all 3D Modeller tasks. Numeric tolerance for floating-point comparison is read from the 3d_modeller_tolerance_overrides FileObject.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "3d-modeller-file"},
+            "extract": {"jsonPath": "$.tasks[*].id"},
+            "transform": {
+              "regex": "tc_3d_0*(\\d+)",
+              "replace": "assets/3d_ground_truth/task$1.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ml:RecordSet",
+      "@id": "video-editor-tasks",
+      "name": "video_editor_tasks",
+      "description": "20 Video Editor tasks (2 easy, 9 medium, 9 hard) targeting a browser-based timeline editor.",
+      "key": "video-editor-tasks/id",
+      "field": [
+        {
+          "@type": "ml:Field",
+          "@id": "video-editor-tasks/id",
+          "name": "id",
+          "description": "Unique task identifier (tc_vid_001–tc_vid_020).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "video-editor-file"},
+            "extract": {"jsonPath": "$.tasks[*].id"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "video-editor-tasks/difficulty_level",
+          "name": "difficulty_level",
+          "description": "Task difficulty: easy | medium | hard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "video-editor-file"},
+            "extract": {"jsonPath": "$.tasks[*].difficulty_level"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "video-editor-tasks/prompt",
+          "name": "prompt",
+          "description": "Markdown task instruction shown to the agent, including goal, numbered steps, and expected JSON result format.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "video-editor-file"},
+            "extract": {"jsonPath": "$.tasks[*].prompt"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "video-editor-tasks/gt_asset_path",
+          "name": "gt_asset_path",
+          "description": "Relative path to the authoritative ground-truth JSON file for this task inside video-editor-gt-fileset. The filename is the task id + '.json': assets/video_ground_truth/{id}.json. The inline gt field in the YAML is empty for all Video Editor tasks.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "video-editor-file"},
+            "extract": {"jsonPath": "$.tasks[*].id"},
+            "transform": {
+              "regex": "(tc_vid_\\d+)",
+              "replace": "assets/video_ground_truth/$1.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ml:RecordSet",
+      "@id": "circuit-designer-tasks",
+      "name": "circuit_designer_tasks",
+      "description": "20 Circuit Designer tasks (2 easy, 9 medium, 9 hard) targeting CircuitJS. Tasks cover digital logic, analogue measurement, and sequential circuits.",
+      "key": "circuit-designer-tasks/id",
+      "field": [
+        {
+          "@type": "ml:Field",
+          "@id": "circuit-designer-tasks/id",
+          "name": "id",
+          "description": "Unique task identifier (tc_circuit_001–tc_circuit_020).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "circuit-designer-file"},
+            "extract": {"jsonPath": "$.tasks[*].id"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "circuit-designer-tasks/difficulty_level",
+          "name": "difficulty_level",
+          "description": "Task difficulty: easy | medium | hard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "circuit-designer-file"},
+            "extract": {"jsonPath": "$.tasks[*].difficulty_level"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "circuit-designer-tasks/prompt",
+          "name": "prompt",
+          "description": "Markdown task instruction shown to the agent, including goal, numbered steps, component values, wiring instructions, and expected JSON result format.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "circuit-designer-file"},
+            "extract": {"jsonPath": "$.tasks[*].prompt"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "circuit-designer-tasks/gt",
+          "name": "gt",
+          "description": "Inline ground truth. For digital-logic tasks: the serialised CircuitJS netlist string the evaluator compares against. For analogue-measurement tasks: the exact numeric reading (e.g. voltage, frequency) expected from the simulator.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "circuit-designer-file"},
+            "extract": {"jsonPath": "$.tasks[*].gt"}
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ml:RecordSet",
+      "@id": "flight-analyser-tasks",
+      "name": "flight_analyser_tasks",
+      "description": "20 Flight Analyser tasks (2 easy, 9 medium, 9 hard) based on a fixed ADS-B replay session. Tasks require counting aircraft, detecting border crossings, tracking movements, and extracting telemetry.",
+      "key": "flight-analyser-tasks/id",
+      "field": [
+        {
+          "@type": "ml:Field",
+          "@id": "flight-analyser-tasks/id",
+          "name": "id",
+          "description": "Unique task identifier (tc_frad_001–tc_frad_020).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "flight-analyser-file"},
+            "extract": {"jsonPath": "$.tasks[*].id"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "flight-analyser-tasks/difficulty_level",
+          "name": "difficulty_level",
+          "description": "Task difficulty: easy | medium | hard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "flight-analyser-file"},
+            "extract": {"jsonPath": "$.tasks[*].difficulty_level"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "flight-analyser-tasks/prompt",
+          "name": "prompt",
+          "description": "Markdown task instruction shown to the agent, including goal, numbered steps, and expected JSON result format.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "flight-analyser-file"},
+            "extract": {"jsonPath": "$.tasks[*].prompt"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "flight-analyser-tasks/gt",
+          "name": "gt",
+          "description": "Inline ground truth containing the exact answer values the evaluator checks against (callsigns, counts, UTC times, telemetry readings).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "flight-analyser-file"},
+            "extract": {"jsonPath": "$.tasks[*].gt"}
+          }
+        },
+        {
+          "@type": "ml:Field",
+          "@id": "flight-analyser-tasks/eval_config",
+          "name": "eval_config",
+          "description": "Optional per-task evaluator configuration (e.g. tolerance_fields with numeric tolerances for fields such as num_country_borders). Absent on most tasks.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "flight-analyser-file"},
+            "extract": {"jsonPath": "$.tasks[*].eval_config"}
+          }
+        }
+      ]
+    }
+  ]
+}

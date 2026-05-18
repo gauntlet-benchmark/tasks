@@ -1,0 +1,148 @@
+{
+  "id": "349fad10-0c20-437d-a4b8-29e02bb46c25",
+  "name": "Row of Objects Scene",
+  "createdAt": 1776960479109,
+  "updatedAt": 1776960479109,
+  "version": 1,
+  "metadata": {
+    "description": "",
+    "thumbnail": null
+  },
+  "scene": {
+    "objects": [
+      {
+        "id": "3314c063-112d-4d6b-b57a-587330661a75",
+        "type": "cube",
+        "name": "Cube 1",
+        "visible": true,
+        "locked": false,
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "color": "#ff0000",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "cb585880-0229-450f-90d0-91b3d9cb789d",
+        "type": "sphere",
+        "name": "Sphere 1",
+        "visible": true,
+        "locked": false,
+        "position": [
+          1,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "color": "#00ff00",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "a2b18aa6-9c7c-4724-93a3-bb815b5a1088",
+        "type": "cylinder",
+        "name": "Cylinder 1",
+        "visible": true,
+        "locked": false,
+        "position": [
+          2,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "color": "#0000ff",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "79e2cfd8-e620-4c59-b5aa-88215d8eda8c",
+        "type": "cone",
+        "name": "Cone 1",
+        "visible": true,
+        "locked": false,
+        "position": [
+          3,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "color": "#ffff00",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "sphere-f0963d90-0014-43c8-914d-c6cc7e2468b1",
+        "type": "sphere",
+        "name": "Sphere 2",
+        "visible": true,
+        "locked": false,
+        "position": [
+          4,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "color": "#aa00ff",
+        "opacity": 1,
+        "wireframe": false
+      }
+    ],
+    "settings": {
+      "showGrid": true,
+      "showAxes": true,
+      "backgroundColor": "#1a1a2e",
+      "fov": 50,
+      "cameraType": "perspective",
+      "orthoZoom": 10
+    }
+  }
+}
