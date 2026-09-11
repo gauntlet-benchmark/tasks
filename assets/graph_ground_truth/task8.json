@@ -1,12 +1,12 @@
 {
-  "id": "8ed398a4-e7c9-41de-b78e-9358ea59bf5c",
-  "name": "Order Processing Pipeline",
+  "id": "79cc3fae-5ad1-4950-a711-18b6ddfa7776",
+  "name": "API Data Pipeline",
   "createdAt": 1764595985088,
-  "updatedAt": 1776160831350,
+  "updatedAt": 1785568923128,
   "version": 1,
   "metadata": {
-    "description": "Process orders with conditional routing based on order value.",
-    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgMjEwNCAzOTInPjxsaW5lIHgxPSc2MCcgeTE9JzE0OCcgeDI9JzM3MicgeTI9JzE0OCcgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzgyOCcgeTE9JzE0OCcgeDI9JzEyNjgnIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzgyOCcgeTE9JzE0OCcgeDI9JzEyODQnIHkyPSczMjQnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxsaW5lIHgxPScxMzA4JyB5MT0nMzYnIHgyPScxNzgwJyB5Mj0nMTQ4JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48bGluZSB4MT0nMTMyNCcgeTE9JzMyNCcgeDI9JzE3ODAnIHkyPScxNDgnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxsaW5lIHgxPScxODIwJyB5MT0nMTQ4JyB4Mj0nMjA4NCcgeTI9JzE0OCcgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzQxMicgeTE9JzE0OCcgeDI9JzYyOCcgeTI9JzM4OCcgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzY2OCcgeTE9JzM4OCcgeDI9Jzc4OCcgeTI9JzE0OCcgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PHJlY3QgeD0nMjAnIHk9JzEzMicgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PScyNicgeT0nMTUyJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+bWFudWFsVHJpZ2dlPC90ZXh0PjxyZWN0IHg9JzM3MicgeT0nMTMyJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzM3OCcgeT0nMTUyJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+ZGF0YWJhc2VDb25uPC90ZXh0PjxyZWN0IHg9Jzc4OCcgeT0nMTMyJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9Jzc5NCcgeT0nMTUyJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+aWY8L3RleHQ+PHJlY3QgeD0nMTI2OCcgeT0nMjAnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nMTI3NCcgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5lZGl0RmllbGRzPC90ZXh0PjxyZWN0IHg9JzEyODQnIHk9JzMwOCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PScxMjkwJyB5PSczMjgnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5lZGl0RmllbGRzPC90ZXh0PjxyZWN0IHg9JzE3ODAnIHk9JzEzMicgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PScxNzg2JyB5PScxNTInIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5tZXJnZTwvdGV4dD48cmVjdCB4PScyMDg0JyB5PScxMzInIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nMjA5MCcgeT0nMTUyJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+YWdncmVnYXRlPC90ZXh0PjxyZWN0IHg9JzYyOCcgeT0nMzcyJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzYzNCcgeT0nMzkyJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+ZmlsdGVyPC90ZXh0Pjwvc3ZnPg=="
+    "description": "Fetch data from an API, transform it, and aggregate results.",
+    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgMTYyNCAyOTYnPjxsaW5lIHgxPSc2MCcgeTE9JzM2JyB4Mj0nNDIwJyB5Mj0nMzYnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxsaW5lIHgxPSc5MjQnIHkxPSczNicgeDI9JzEyNTInIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzEyOTInIHkxPSczNicgeDI9JzE2MDQnIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzQ2MCcgeTE9JzM2JyB4Mj0nNzU2JyB5Mj0nMjkyJyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48bGluZSB4MT0nNzk2JyB5MT0nMjkyJyB4Mj0nODg0JyB5Mj0nMzYnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxyZWN0IHg9JzIwJyB5PScyMCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PScyNicgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5tYW51YWxUcmlnZ2U8L3RleHQ+PHJlY3QgeD0nNDIwJyB5PScyMCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PSc0MjYnIHk9JzQwJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+aHR0cFJlcXVlc3Q8L3RleHQ+PHJlY3QgeD0nODg0JyB5PScyMCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PSc4OTAnIHk9JzQwJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+bWFwPC90ZXh0PjxyZWN0IHg9JzEyNTInIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzEyNTgnIHk9JzQwJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+c29ydDwvdGV4dD48cmVjdCB4PScxNjA0JyB5PScyMCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PScxNjEwJyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPmxpbWl0PC90ZXh0PjxyZWN0IHg9Jzc1NicgeT0nMjc2JyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9Jzc2MicgeT0nMjk2JyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+bm9PcGVyYXRpb248L3RleHQ+PC9zdmc+"
   },
   "graph": {
     "nodes": [
@@ -14,222 +14,147 @@
         "id": "trigger-1",
         "type": "manualTrigger",
         "position": {
-          "x": -288,
-          "y": 240
+          "x": -336,
+          "y": 192
         },
         "data": {},
-        "width": 303,
+        "width": 314,
         "height": 141,
         "selected": false,
         "positionAbsolute": {
-          "x": -288,
-          "y": 240
+          "x": -336,
+          "y": 192
         },
         "dragging": false
       },
       {
-        "id": "db-orders",
-        "type": "databaseConnector",
+        "id": "http-1",
+        "type": "httpRequest",
         "position": {
           "x": 64,
-          "y": 240
+          "y": 192
         },
         "data": {
-          "table": "orders",
-          "where": "",
-          "limit": 20
+          "method": "GET",
+          "url": "https://jsonplaceholder.typicode.com/users",
+          "headers": {},
+          "body": ""
         },
-        "width": 372,
+        "width": 408,
         "height": 141,
         "selected": false,
         "positionAbsolute": {
           "x": 64,
-          "y": 240
+          "y": 192
         },
         "dragging": false
       },
       {
-        "id": "if-highvalue",
-        "type": "if",
+        "id": "map-1",
+        "type": "map",
         "position": {
-          "x": 480,
-          "y": 240
+          "x": 528,
+          "y": 192
         },
         "data": {
-          "expression": "item.amount >= 300",
-          "notes": "Route high-value orders (>= $300) for priority processing"
+          "expression": "({ id: item.id, name: item.name, email: item.email, city: item.address?.city })"
         },
-        "width": 379,
-        "height": 169,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 480,
-          "y": 240
-        },
-        "dragging": false
-      },
-      {
-        "id": "edit-priority",
-        "type": "editFields",
-        "position": {
-          "x": 960,
-          "y": 128
-        },
-        "data": {
-          "fields": {
-            "priority": "=\"high\"",
-            "requiresApproval": "=true",
-            "processingFee": "=item.amount * 0.02"
-          }
-        },
-        "width": 431,
+        "width": 320,
         "height": 141,
         "selected": false,
         "positionAbsolute": {
-          "x": 960,
-          "y": 128
+          "x": 528,
+          "y": 192
         },
         "dragging": false
       },
       {
-        "id": "edit-standard",
-        "type": "editFields",
+        "id": "sort-1",
+        "type": "sort",
         "position": {
-          "x": 976,
-          "y": 416
+          "x": 896,
+          "y": 192
         },
         "data": {
-          "fields": {
-            "priority": "=\"standard\"",
-            "requiresApproval": "=false",
-            "processingFee": "=item.amount * 0.03"
-          }
+          "field": "name",
+          "direction": "asc"
         },
-        "width": 431,
+        "width": 291,
+        "height": 141,
+        "selected": true,
+        "positionAbsolute": {
+          "x": 896,
+          "y": 192
+        },
+        "dragging": false
+      },
+      {
+        "id": "limit-1",
+        "type": "limit",
+        "position": {
+          "x": 1248,
+          "y": 192
+        },
+        "data": {
+          "n": 5
+        },
+        "width": 291,
         "height": 141,
         "selected": false,
         "positionAbsolute": {
-          "x": 976,
-          "y": 416
+          "x": 1248,
+          "y": 192
         },
         "dragging": false
       },
       {
-        "id": "merge-orders",
-        "type": "merge",
+        "id": "48e0d709-d9be-4917-a297-007d51fcd2b3",
+        "type": "noOperation",
         "position": {
-          "x": 1472,
-          "y": 240
+          "x": 400,
+          "y": 448
         },
         "data": {},
-        "width": 236,
+        "width": 225,
         "height": 141,
         "selected": false,
         "positionAbsolute": {
-          "x": 1472,
-          "y": 240
-        },
-        "dragging": false
-      },
-      {
-        "id": "aggregate-1",
-        "type": "aggregate",
-        "position": {
-          "x": 1776,
-          "y": 240
-        },
-        "data": {
-          "groupBy": "priority",
-          "reducers": [
-            {
-              "op": "count",
-              "as": "orderCount"
-            },
-            {
-              "op": "sum",
-              "field": "amount",
-              "as": "totalValue"
-            }
-          ]
-        },
-        "width": 341,
-        "height": 141,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 1776,
-          "y": 240
-        },
-        "dragging": false
-      },
-      {
-        "id": "41e42af5-3eef-40bd-b626-a0bd7403ef83",
-        "type": "filter",
-        "position": {
-          "x": 320,
-          "y": 480
-        },
-        "data": {
-          "predicate": "item.status === 'completed'"
-        },
-        "width": 312,
-        "height": 141,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 320,
-          "y": 480
+          "x": 400,
+          "y": 448
         },
         "dragging": false
       }
     ],
     "edges": [
       {
-        "id": "e-trigger-db",
+        "id": "e1",
         "source": "trigger-1",
-        "target": "db-orders",
+        "target": "http-1",
         "sourceHandle": "trigger"
       },
       {
-        "id": "e-if-true",
-        "source": "if-highvalue",
-        "target": "edit-priority",
-        "sourceHandle": "onTrue",
-        "label": "High Value"
+        "id": "e3",
+        "source": "map-1",
+        "target": "sort-1"
       },
       {
-        "id": "e-if-false",
-        "source": "if-highvalue",
-        "target": "edit-standard",
-        "sourceHandle": "onFalse",
-        "label": "Standard"
+        "id": "e4",
+        "source": "sort-1",
+        "target": "limit-1"
       },
       {
-        "id": "e-priority-merge",
-        "source": "edit-priority",
-        "target": "merge-orders"
-      },
-      {
-        "id": "e-standard-merge",
-        "source": "edit-standard",
-        "target": "merge-orders"
-      },
-      {
-        "id": "e-merge-agg",
-        "source": "merge-orders",
-        "target": "aggregate-1"
-      },
-      {
-        "source": "db-orders",
+        "source": "http-1",
         "sourceHandle": null,
-        "target": "41e42af5-3eef-40bd-b626-a0bd7403ef83",
+        "target": "48e0d709-d9be-4917-a297-007d51fcd2b3",
         "targetHandle": null,
-        "id": "reactflow__edge-db-orders-41e42af5-3eef-40bd-b626-a0bd7403ef83"
+        "id": "reactflow__edge-http-1-48e0d709-d9be-4917-a297-007d51fcd2b3"
       },
       {
-        "source": "41e42af5-3eef-40bd-b626-a0bd7403ef83",
+        "source": "48e0d709-d9be-4917-a297-007d51fcd2b3",
         "sourceHandle": null,
-        "target": "if-highvalue",
+        "target": "map-1",
         "targetHandle": null,
-        "id": "reactflow__edge-41e42af5-3eef-40bd-b626-a0bd7403ef83-if-highvalue"
+        "id": "reactflow__edge-48e0d709-d9be-4917-a297-007d51fcd2b3-map-1"
       }
     ]
   }

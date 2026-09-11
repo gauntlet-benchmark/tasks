@@ -1,132 +1,80 @@
 {
-  "id": "b4b9b886-7246-4179-bb1f-f5bd63d98956",
-  "name": "API Data Pipeline",
-  "createdAt": 1764595985088,
-  "updatedAt": 1776165717563,
+  "id": "ea91dcb0-7a22-48b7-ba80-09375396f45f",
+  "name": "Range → Map → Table",
+  "createdAt": 1785567644542,
+  "updatedAt": 1785567662646,
   "version": 1,
   "metadata": {
-    "description": "Fetch data from an API, transform it, and aggregate results.",
-    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgMTYyNCAzMTInPjxsaW5lIHgxPSc2MCcgeTE9JzM2JyB4Mj0nNDIwJyB5Mj0nMzYnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxsaW5lIHgxPSc0NjAnIHkxPSczNicgeDI9Jzg4NCcgeTI9JzM2JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48bGluZSB4MT0nOTI0JyB5MT0nMzYnIHgyPScxMjUyJyB5Mj0nMzYnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxsaW5lIHgxPScxMjkyJyB5MT0nMzYnIHgyPScxNjA0JyB5Mj0nMzYnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxsaW5lIHgxPScxMjkyJyB5MT0nMzYnIHgyPScxNTg4JyB5Mj0nMzA4JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48cmVjdCB4PScyMCcgeT0nMjAnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nMjYnIHk9JzQwJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+bWFudWFsVHJpZ2dlPC90ZXh0PjxyZWN0IHg9JzQyMCcgeT0nMjAnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nNDI2JyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPmh0dHBSZXF1ZXN0PC90ZXh0PjxyZWN0IHg9Jzg4NCcgeT0nMjAnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nODkwJyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPm1hcDwvdGV4dD48cmVjdCB4PScxMjUyJyB5PScyMCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PScxMjU4JyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPnNvcnQ8L3RleHQ+PHJlY3QgeD0nMTYwNCcgeT0nMjAnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nMTYxMCcgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5saW1pdDwvdGV4dD48cmVjdCB4PScxNTg4JyB5PScyOTInIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nMTU5NCcgeT0nMzEyJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+c2VuZEVtYWlsPC90ZXh0Pjwvc3ZnPg=="
+    "description": "",
+    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgNTQwIDIzMic+PGxpbmUgeDE9JzYwJyB5MT0nOTInIHgyPScxOTInIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzIzMicgeTE9JzM2JyB4Mj0nNTIwJyB5Mj0nOTInIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxsaW5lIHgxPScyMzInIHkxPSczNicgeDI9JzQwMCcgeTI9JzIyOCcgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PHJlY3QgeD0nMjAnIHk9Jzc2JyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzI2JyB5PSc5NicgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPnJhbmdlR2VuZXJhdDwvdGV4dD48cmVjdCB4PScxOTInIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzE5OCcgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5tYXA8L3RleHQ+PHJlY3QgeD0nNTIwJyB5PSc3Nicgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PSc1MjYnIHk9Jzk2JyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+dGFibGVQcmV2aWV3PC90ZXh0PjxyZWN0IHg9JzQwMCcgeT0nMjEyJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzQwNicgeT0nMjMyJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+ZGF0YVRhYmxlPC90ZXh0Pjwvc3ZnPg=="
   },
   "graph": {
     "nodes": [
       {
-        "id": "trigger-1",
-        "type": "manualTrigger",
+        "id": "n1",
+        "type": "rangeGenerator",
         "position": {
-          "x": -336,
-          "y": 192
-        },
-        "data": {},
-        "width": 303,
-        "height": 141,
-        "selected": false,
-        "positionAbsolute": {
-          "x": -336,
-          "y": 192
-        },
-        "dragging": false
-      },
-      {
-        "id": "http-1",
-        "type": "httpRequest",
-        "position": {
-          "x": 64,
-          "y": 192
+          "x": 100,
+          "y": 200
         },
         "data": {
-          "method": "GET",
-          "url": "https://jsonplaceholder.typicode.com/users",
-          "headers": {},
-          "body": ""
+          "start": 1,
+          "stop": 5,
+          "step": 1
         },
-        "width": 387,
-        "height": 141,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 64,
-          "y": 192
-        },
-        "dragging": false
+        "width": 150,
+        "height": 22
       },
       {
-        "id": "map-1",
+        "id": "n2",
         "type": "map",
         "position": {
-          "x": 528,
-          "y": 192
+          "x": 272,
+          "y": 144
         },
         "data": {
-          "expression": "({ id: item.id, name: item.name, email: item.email, city: item.address?.city })"
+          "expression": "{ squared: item.value * item.value }"
         },
-        "width": 303,
+        "width": 320,
         "height": 141,
         "selected": false,
         "positionAbsolute": {
-          "x": 528,
-          "y": 192
+          "x": 272,
+          "y": 144
         },
         "dragging": false
       },
       {
-        "id": "sort-1",
-        "type": "sort",
+        "id": "n3",
+        "type": "tablePreview",
         "position": {
-          "x": 896,
-          "y": 192
+          "x": 600,
+          "y": 200
         },
         "data": {
-          "field": "name",
-          "direction": "asc"
+          "limit": 50
         },
-        "width": 276,
-        "height": 141,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 896,
-          "y": 192
-        },
-        "dragging": false
+        "width": 150,
+        "height": 22
       },
       {
-        "id": "limit-1",
-        "type": "limit",
+        "id": "c5b21f8d-2c97-4890-99dc-0a913ba38c45",
+        "type": "dataTable",
         "position": {
-          "x": 1248,
-          "y": 192
+          "x": 480,
+          "y": 336
         },
         "data": {
-          "n": 5
+          "tableName": "records",
+          "operation": "get",
+          "keyField": "id"
         },
-        "width": 278,
-        "height": 141,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 1248,
-          "y": 192
-        },
-        "dragging": false
-      },
-      {
-        "id": "55887f16-5f12-410e-804b-fcb0c1631435",
-        "type": "sendEmail",
-        "position": {
-          "x": 1232,
-          "y": 464
-        },
-        "data": {
-          "transport": "smtp",
-          "from": "",
-          "to": "",
-          "subject": "Users list",
-          "body": ""
-        },
-        "width": 312,
+        "width": 343,
         "height": 141,
         "selected": true,
         "positionAbsolute": {
-          "x": 1232,
-          "y": 464
+          "x": 480,
+          "y": 336
         },
         "dragging": false
       }
@@ -134,31 +82,20 @@
     "edges": [
       {
         "id": "e1",
-        "source": "trigger-1",
-        "target": "http-1",
-        "sourceHandle": "trigger"
+        "source": "n1",
+        "target": "n2"
       },
       {
         "id": "e2",
-        "source": "http-1",
-        "target": "map-1"
+        "source": "n2",
+        "target": "n3"
       },
       {
-        "id": "e3",
-        "source": "map-1",
-        "target": "sort-1"
-      },
-      {
-        "id": "e4",
-        "source": "sort-1",
-        "target": "limit-1"
-      },
-      {
-        "source": "sort-1",
+        "source": "n2",
         "sourceHandle": null,
-        "target": "55887f16-5f12-410e-804b-fcb0c1631435",
+        "target": "c5b21f8d-2c97-4890-99dc-0a913ba38c45",
         "targetHandle": null,
-        "id": "reactflow__edge-sort-1-55887f16-5f12-410e-804b-fcb0c1631435"
+        "id": "reactflow__edge-n2-c5b21f8d-2c97-4890-99dc-0a913ba38c45"
       }
     ]
   }

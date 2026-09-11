@@ -1,121 +1,98 @@
 {
-  "scenario": 7,
-  "endpoint_content": {
-    "operations": [
-      {
-        "type": "MEDIA_UPLOAD",
-        "data": {
-          "filename": "Flower Video.webm",
-          "mediaId": "705cbb26-f8b0-4fd1-b73b-7c07fe852eac",
-          "mediaType": "VIDEO",
-          "duration": 5059
-        },
-        "timestamp": 1776322222811
+  "operations": [
+    {
+      "type": "MEDIA_UPLOAD",
+      "data": {
+        "filename": "Flower Video.webm",
+        "mediaId": "0a44ae0c-52e8-49cb-91bd-a2ba7a22dc76",
+        "mediaType": "VIDEO",
+        "duration": 5059
       },
-      {
-        "type": "MEDIA_UPLOAD",
-        "data": {
-          "filename": "T-Rex Roar.mp3",
-          "mediaId": "4db2b559-75fb-4709-8b9a-6a0d0af60509",
-          "mediaType": "AUDIO",
-          "duration": 2074
-        },
-        "timestamp": 1776322224187
+      "timestamp": 1785533835000
+    },
+    {
+      "type": "MEDIA_UPLOAD",
+      "data": {
+        "filename": "Tuning a Radio.webm",
+        "mediaId": "fa14fcbc-c924-4e7e-8cd9-6205474e0afe",
+        "mediaType": "VIDEO",
+        "duration": 9051
       },
-      {
-        "type": "TIMELINE_ADD",
-        "data": {
-          "mediaId": "705cbb26-f8b0-4fd1-b73b-7c07fe852eac",
-          "mediaName": "Flower Video.webm",
-          "elementId": "208892a6-91dd-4db0-a759-114100af9125",
-          "trackIndex": 0,
-          "startTime": 0,
-          "duration": 5059
-        },
-        "timestamp": 1776322225259
+      "timestamp": 1785533836678
+    },
+    {
+      "type": "TIMELINE_ADD",
+      "data": {
+        "mediaId": "0a44ae0c-52e8-49cb-91bd-a2ba7a22dc76",
+        "mediaName": "Flower Video.webm",
+        "elementId": "be5a5cb0-70c8-45ea-9556-a30ba8ff5f23",
+        "trackIndex": 0,
+        "startTime": 0,
+        "duration": 5059
       },
-      {
-        "type": "TIMELINE_ADD",
-        "data": {
-          "mediaId": "4db2b559-75fb-4709-8b9a-6a0d0af60509",
-          "mediaName": "T-Rex Roar.mp3",
-          "elementId": "025f6e63-0a1b-4429-b231-dc869fce3fb7",
-          "trackIndex": 1,
-          "startTime": 0,
-          "duration": 2074
-        },
-        "timestamp": 1776322226580
+      "timestamp": 1785533838234
+    },
+    {
+      "type": "TIMELINE_ADD",
+      "data": {
+        "mediaId": "fa14fcbc-c924-4e7e-8cd9-6205474e0afe",
+        "mediaName": "Tuning a Radio.webm",
+        "elementId": "36ca409d-3b31-486a-bfbc-abba062541a1",
+        "trackIndex": 0,
+        "startTime": 5059,
+        "duration": 9051
       },
-      {
-        "type": "TIMELINE_MOVE",
-        "data": {
-          "elementId": "025f6e63-0a1b-4429-b231-dc869fce3fb7",
-          "mediaName": "T-Rex Roar.mp3",
-          "prevTrackIndex": 1,
-          "newTrackIndex": 1,
-          "prevStartTime": 2900,
-          "newStartTime": 2900
-        },
-        "timestamp": 1776322228474
-      },
-      {
-        "type": "EXPORT_COMPLETE",
-        "data": {
-          "finalDurationMs": 5059,
-          "trackCount": 2,
-          "sourceMedia": [
-            {
-              "filename": "Flower Video.webm",
-              "mediaType": "VIDEO",
-              "originalDurationMs": 5059
+      "timestamp": 1785533839660
+    },
+    {
+      "type": "EXPORT_COMPLETE",
+      "data": {
+        "finalDurationMs": 14110,
+        "trackCount": 1,
+        "sourceMedia": [
+          {
+            "filename": "Flower Video.webm",
+            "mediaType": "VIDEO",
+            "originalDurationMs": 5059
+          },
+          {
+            "filename": "Tuning a Radio.webm",
+            "mediaType": "VIDEO",
+            "originalDurationMs": 9051
+          }
+        ],
+        "timeline": [
+          {
+            "trackIndex": 0,
+            "effectSubTrack": {
+              "items": []
             },
-            {
-              "filename": "T-Rex Roar.mp3",
-              "mediaType": "AUDIO",
-              "originalDurationMs": 2074
-            }
-          ],
-          "timeline": [
-            {
-              "trackIndex": 0,
-              "effectSubTrack": {
-                "items": []
+            "elements": [
+              {
+                "elementId": "be5a5cb0-70c8-45ea-9556-a30ba8ff5f23",
+                "mediaName": "Flower Video.webm",
+                "mediaType": "VIDEO",
+                "startTimeMs": 0,
+                "durationMs": 5059,
+                "trimFromStartMs": 0,
+                "trimFromEndMs": 0,
+                "activeEffectsAtStart": []
               },
-              "elements": [
-                {
-                  "elementId": "208892a6-91dd-4db0-a759-114100af9125",
-                  "mediaName": "Flower Video.webm",
-                  "mediaType": "VIDEO",
-                  "startTimeMs": 0,
-                  "durationMs": 5059,
-                  "trimFromStartMs": 0,
-                  "trimFromEndMs": 0,
-                  "activeEffectsAtStart": []
-                }
-              ]
-            },
-            {
-              "trackIndex": 1,
-              "effectSubTrack": {
-                "items": []
-              },
-              "elements": [
-                {
-                  "elementId": "025f6e63-0a1b-4429-b231-dc869fce3fb7",
-                  "mediaName": "T-Rex Roar.mp3",
-                  "mediaType": "AUDIO",
-                  "startTimeMs": 2900,
-                  "durationMs": 2074,
-                  "trimFromStartMs": 0,
-                  "trimFromEndMs": 0,
-                  "activeEffectsAtStart": []
-                }
-              ]
-            }
-          ]
-        },
-        "timestamp": 1776322236520
-      }
-    ]
-  }
+              {
+                "elementId": "36ca409d-3b31-486a-bfbc-abba062541a1",
+                "mediaName": "Tuning a Radio.webm",
+                "mediaType": "VIDEO",
+                "startTimeMs": 5059,
+                "durationMs": 9051,
+                "trimFromStartMs": 0,
+                "trimFromEndMs": 0,
+                "activeEffectsAtStart": []
+              }
+            ]
+          }
+        ]
+      },
+      "timestamp": 1785533846153
+    }
+  ]
 }

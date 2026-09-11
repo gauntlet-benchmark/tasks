@@ -1,343 +1,121 @@
 {
-  "scenario": 10,
+  "scenario": 7,
   "endpoint_content": {
-  "operations": [
-    {
-      "type": "MEDIA_UPLOAD",
-      "data": {
-        "filename": "Flower Video.webm",
-        "mediaId": "2b404aae-6be4-464b-8085-d79fbe8f23fe",
-        "mediaType": "VIDEO",
-        "duration": 5059
+    "operations": [
+      {
+        "type": "MEDIA_UPLOAD",
+        "data": {
+          "filename": "Flower Video.webm",
+          "mediaId": "705cbb26-f8b0-4fd1-b73b-7c07fe852eac",
+          "mediaType": "VIDEO",
+          "duration": 5059
+        },
+        "timestamp": 1776322222811
       },
-      "timestamp": 1776794570354
-    },
-    {
-      "type": "TIMELINE_ADD",
-      "data": {
-        "mediaId": "2b404aae-6be4-464b-8085-d79fbe8f23fe",
-        "mediaName": "Flower Video.webm",
-        "elementId": "a529f128-8389-40e9-97ce-1079566a600c",
-        "trackIndex": 0,
-        "startTime": 0,
-        "duration": 5059
+      {
+        "type": "MEDIA_UPLOAD",
+        "data": {
+          "filename": "T-Rex Roar.mp3",
+          "mediaId": "4db2b559-75fb-4709-8b9a-6a0d0af60509",
+          "mediaType": "AUDIO",
+          "duration": 2074
+        },
+        "timestamp": 1776322224187
       },
-      "timestamp": 1776794571366
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "a529f128-8389-40e9-97ce-1079566a600c",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 0,
-        "newStartTime": 0
+      {
+        "type": "TIMELINE_ADD",
+        "data": {
+          "mediaId": "705cbb26-f8b0-4fd1-b73b-7c07fe852eac",
+          "mediaName": "Flower Video.webm",
+          "elementId": "208892a6-91dd-4db0-a759-114100af9125",
+          "trackIndex": 0,
+          "startTime": 0,
+          "duration": 5059
+        },
+        "timestamp": 1776322225259
       },
-      "timestamp": 1776794575424
-    },
-    {
-      "type": "TIMELINE_SPLIT",
-      "data": {
-        "elementId": "a529f128-8389-40e9-97ce-1079566a600c",
-        "mediaName": "Flower Video.webm",
-        "leftElementId": "a529f128-8389-40e9-97ce-1079566a600c",
-        "rightElementId": "cf95c53d-e681-4394-85e6-84b04eade7eb",
-        "splitTimeMs": 3975
+      {
+        "type": "TIMELINE_ADD",
+        "data": {
+          "mediaId": "4db2b559-75fb-4709-8b9a-6a0d0af60509",
+          "mediaName": "T-Rex Roar.mp3",
+          "elementId": "025f6e63-0a1b-4429-b231-dc869fce3fb7",
+          "trackIndex": 1,
+          "startTime": 0,
+          "duration": 2074
+        },
+        "timestamp": 1776322226580
       },
-      "timestamp": 1776794576096
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "cf95c53d-e681-4394-85e6-84b04eade7eb",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 3975,
-        "newStartTime": 3975
+      {
+        "type": "TIMELINE_MOVE",
+        "data": {
+          "elementId": "025f6e63-0a1b-4429-b231-dc869fce3fb7",
+          "mediaName": "T-Rex Roar.mp3",
+          "prevTrackIndex": 1,
+          "newTrackIndex": 1,
+          "prevStartTime": 2900,
+          "newStartTime": 2900
+        },
+        "timestamp": 1776322228474
       },
-      "timestamp": 1776794576670
-    },
-    {
-      "type": "TIMELINE_DELETE",
-      "data": {
-        "elementId": "cf95c53d-e681-4394-85e6-84b04eade7eb",
-        "mediaName": "Flower Video.webm",
-        "trackIndex": 0,
-        "startTime": 3975,
-        "duration": 1084
-      },
-      "timestamp": 1776794577480
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "a529f128-8389-40e9-97ce-1079566a600c",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 0,
-        "newStartTime": 0
-      },
-      "timestamp": 1776794578070
-    },
-    {
-      "type": "TIMELINE_DUPLICATE",
-      "data": {
-        "sourceElementId": "a529f128-8389-40e9-97ce-1079566a600c",
-        "newElementId": "7014d2c6-d390-4e7c-b065-10d4792538b6",
-        "mediaName": "Flower Video.webm",
-        "newStartTime": 3975
-      },
-      "timestamp": 1776794579200
-    },
-    {
-      "type": "TIMELINE_DUPLICATE",
-      "data": {
-        "sourceElementId": "7014d2c6-d390-4e7c-b065-10d4792538b6",
-        "newElementId": "be536b49-c27e-4dad-9a30-5e29d6f18b19",
-        "mediaName": "Flower Video.webm",
-        "newStartTime": 7950
-      },
-      "timestamp": 1776794579564
-    },
-    {
-      "type": "TIMELINE_DUPLICATE",
-      "data": {
-        "sourceElementId": "be536b49-c27e-4dad-9a30-5e29d6f18b19",
-        "newElementId": "d7a165c4-ff20-49c7-8f0f-93adb4d7c86f",
-        "mediaName": "Flower Video.webm",
-        "newStartTime": 11925
-      },
-      "timestamp": 1776794580216
-    },
-    {
-      "type": "TIMELINE_DUPLICATE",
-      "data": {
-        "sourceElementId": "d7a165c4-ff20-49c7-8f0f-93adb4d7c86f",
-        "newElementId": "170c9397-cda0-4f1d-a0d5-a815c8435b5e",
-        "mediaName": "Flower Video.webm",
-        "newStartTime": 15900
-      },
-      "timestamp": 1776794581664
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "7014d2c6-d390-4e7c-b065-10d4792538b6",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 3975,
-        "newStartTime": 3975
-      },
-      "timestamp": 1776794583819
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "d7a165c4-ff20-49c7-8f0f-93adb4d7c86f",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 11925,
-        "newStartTime": 11925
-      },
-      "timestamp": 1776794587983
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "7014d2c6-d390-4e7c-b065-10d4792538b6",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 3975,
-        "newStartTime": 3975
-      },
-      "timestamp": 1776794589511
-    },
-    {
-      "type": "TIMELINE_SPLIT",
-      "data": {
-        "elementId": "7014d2c6-d390-4e7c-b065-10d4792538b6",
-        "mediaName": "Flower Video.webm",
-        "leftElementId": "7014d2c6-d390-4e7c-b065-10d4792538b6",
-        "rightElementId": "8a88447e-5761-4999-b013-b362a3ba0380",
-        "splitTimeMs": 6075
-      },
-      "timestamp": 1776794592476
-    },
-    {
-      "type": "TIMELINE_DELETE",
-      "data": {
-        "elementId": "7014d2c6-d390-4e7c-b065-10d4792538b6",
-        "mediaName": "Flower Video.webm",
-        "trackIndex": 0,
-        "startTime": 3975,
-        "duration": 2100
-      },
-      "timestamp": 1776794593804
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "d7a165c4-ff20-49c7-8f0f-93adb4d7c86f",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 11925,
-        "newStartTime": 11925
-      },
-      "timestamp": 1776794602042
-    },
-    {
-      "type": "TIMELINE_SPLIT",
-      "data": {
-        "elementId": "d7a165c4-ff20-49c7-8f0f-93adb4d7c86f",
-        "mediaName": "Flower Video.webm",
-        "leftElementId": "d7a165c4-ff20-49c7-8f0f-93adb4d7c86f",
-        "rightElementId": "67acab68-c634-4d98-9962-9d756813040c",
-        "splitTimeMs": 14000
-      },
-      "timestamp": 1776794602924
-    },
-    {
-      "type": "TIMELINE_DELETE",
-      "data": {
-        "elementId": "d7a165c4-ff20-49c7-8f0f-93adb4d7c86f",
-        "mediaName": "Flower Video.webm",
-        "trackIndex": 0,
-        "startTime": 11925,
-        "duration": 2075
-      },
-      "timestamp": 1776794604428
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "8a88447e-5761-4999-b013-b362a3ba0380",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 3975,
-        "newStartTime": 3975
-      },
-      "timestamp": 1776794606146
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "be536b49-c27e-4dad-9a30-5e29d6f18b19",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 5850,
-        "newStartTime": 5850
-      },
-      "timestamp": 1776794608914
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "67acab68-c634-4d98-9962-9d756813040c",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 9825,
-        "newStartTime": 9825
-      },
-      "timestamp": 1776794610769
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "170c9397-cda0-4f1d-a0d5-a815c8435b5e",
-        "mediaName": "Flower Video.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 11725,
-        "newStartTime": 11725
-      },
-      "timestamp": 1776794612266
-    },
-    {
-      "type": "EXPORT_COMPLETE",
-      "data": {
-        "finalDurationMs": 15700,
-        "trackCount": 1,
-        "sourceMedia": [
-          {
-            "filename": "Flower Video.webm",
-            "mediaType": "VIDEO",
-            "originalDurationMs": 5059
-          }
-        ],
-        "timeline": [
-          {
-            "trackIndex": 0,
-            "effectSubTrack": {
-              "items": []
+      {
+        "type": "EXPORT_COMPLETE",
+        "data": {
+          "finalDurationMs": 5059,
+          "trackCount": 2,
+          "sourceMedia": [
+            {
+              "filename": "Flower Video.webm",
+              "mediaType": "VIDEO",
+              "originalDurationMs": 5059
             },
-            "elements": [
-              {
-                "elementId": "a529f128-8389-40e9-97ce-1079566a600c",
-                "mediaName": "Flower Video.webm",
-                "mediaType": "VIDEO",
-                "startTimeMs": 0,
-                "durationMs": 3975,
-                "trimFromStartMs": 0,
-                "trimFromEndMs": 1084,
-                "activeEffectsAtStart": []
+            {
+              "filename": "T-Rex Roar.mp3",
+              "mediaType": "AUDIO",
+              "originalDurationMs": 2074
+            }
+          ],
+          "timeline": [
+            {
+              "trackIndex": 0,
+              "effectSubTrack": {
+                "items": []
               },
-              {
-                "elementId": "8a88447e-5761-4999-b013-b362a3ba0380",
-                "mediaName": "Flower Video.webm",
-                "mediaType": "VIDEO",
-                "startTimeMs": 3975,
-                "durationMs": 1875,
-                "trimFromStartMs": 2100,
-                "trimFromEndMs": 1084,
-                "activeEffectsAtStart": []
+              "elements": [
+                {
+                  "elementId": "208892a6-91dd-4db0-a759-114100af9125",
+                  "mediaName": "Flower Video.webm",
+                  "mediaType": "VIDEO",
+                  "startTimeMs": 0,
+                  "durationMs": 5059,
+                  "trimFromStartMs": 0,
+                  "trimFromEndMs": 0,
+                  "activeEffectsAtStart": []
+                }
+              ]
+            },
+            {
+              "trackIndex": 1,
+              "effectSubTrack": {
+                "items": []
               },
-              {
-                "elementId": "be536b49-c27e-4dad-9a30-5e29d6f18b19",
-                "mediaName": "Flower Video.webm",
-                "mediaType": "VIDEO",
-                "startTimeMs": 5850,
-                "durationMs": 3975,
-                "trimFromStartMs": 0,
-                "trimFromEndMs": 1084,
-                "activeEffectsAtStart": []
-              },
-              {
-                "elementId": "67acab68-c634-4d98-9962-9d756813040c",
-                "mediaName": "Flower Video.webm",
-                "mediaType": "VIDEO",
-                "startTimeMs": 9825,
-                "durationMs": 1900,
-                "trimFromStartMs": 2075,
-                "trimFromEndMs": 1084,
-                "activeEffectsAtStart": []
-              },
-              {
-                "elementId": "170c9397-cda0-4f1d-a0d5-a815c8435b5e",
-                "mediaName": "Flower Video.webm",
-                "mediaType": "VIDEO",
-                "startTimeMs": 11725,
-                "durationMs": 3975,
-                "trimFromStartMs": 0,
-                "trimFromEndMs": 1084,
-                "activeEffectsAtStart": []
-              }
-            ]
-          }
-        ]
-      },
-      "timestamp": 1776794618771
-    }
-  ]
-}
-
+              "elements": [
+                {
+                  "elementId": "025f6e63-0a1b-4429-b231-dc869fce3fb7",
+                  "mediaName": "T-Rex Roar.mp3",
+                  "mediaType": "AUDIO",
+                  "startTimeMs": 2900,
+                  "durationMs": 2074,
+                  "trimFromStartMs": 0,
+                  "trimFromEndMs": 0,
+                  "activeEffectsAtStart": []
+                }
+              ]
+            }
+          ]
+        },
+        "timestamp": 1776322236520
+      }
+    ]
+  }
 }

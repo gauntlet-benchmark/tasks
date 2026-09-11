@@ -1,251 +1,691 @@
 tasks:
 - id: tc_frad_001
   difficulty_level: easy
-  prompt: "# Count Visible Aircraft at a Specific Zoom Level\n \n ## GOAL\n Count\
-    \ how many aircraft icons are visible on screen after centering on an airport\
-    \ and zooming in.\n \n ## STEPS\n 1. Set the playback time to 14:00 UTC.\n 2.\
-    \ Search for airport **ICN** to center the map on it.\n 3. Zoom in exactly 3 steps.\n\
-    \ 4. Count the total number of aircraft icons currently visible on the screen.\n\
-    \ \n # RESULT FORMAT\n \n ```json\n {\n  \"count\": <N>\n }\n ```"
+  prompt: |-
+    # Count Visible Aircraft at a Specific Zoom Level
+
+    ## GOAL
+    Count how many aircraft icons are visible on screen after centering on an airport and zooming in.
+
+    ## STEPS
+    1. Set the playback time to 14:00 UTC.
+    2. Search for airport **ICN** to center the map on it.
+    3. Zoom in exactly 3 steps.
+    4. Count the total number of aircraft icons currently visible on the screen.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "count": <N>
+    }
+    ```
   gt:
     answer: '{"count": 2}'
 - id: tc_frad_002
   difficulty_level: easy
-  prompt: "# Read Telemetry at a Specific Time\n \n ## GOAL\n Look up a flight's geo\
-    \ altitude and ground speed at a precise moment.\n \n ## STEPS\n 1. Set the playback\
-    \ time to 14:30 UTC.\n 2. Pause the playback.\n 3. Search for flight **VVC5776**\
-    \ using the search bar.\n 4. Open its telemetry data.\n 5. Read and report the\
-    \ exact geo altitude and ground speed values.\n \n # RESULT FORMAT\n \n ```json\n\
-    \ {\n  \"geo_altitude\": \"<value>\",\n  \"ground_speed\": \"<value>\"\n }\n ```"
+  prompt: |-
+    # Read Telemetry at a Specific Time
+
+    ## GOAL
+    Look up a flight's geo altitude and ground speed at a precise moment.
+
+    ## STEPS
+    1. Set the playback time to 14:30 UTC.
+    2. Pause the playback.
+    3. Search for flight **VVC5776** using the search bar.
+    4. Open its telemetry data.
+    5. Read and report the exact geo altitude and ground speed values.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "geo_altitude": "<value>",
+     "ground_speed": "<value>"
+    }
+    ```
   gt:
     answer: '{"geo_altitude": "30,407 ft", "ground_speed": "386 kts"}'
 - id: tc_frad_003
-  difficulty_level: medium
-  prompt: "# Count Landings at an Airport Over a Time Window\n \n ## GOAL\n Observe\
-    \ an airport and count how many aircraft land during a specified period.\n \n\
-    \ ## STEPS\n 1. Set the playback time to 16:14 UTC.\n 2. Navigate to **Budapest\
-    \ Ferenc Liszt Airport (BUD)**.\n 3. Observe the airport for 10 minutes of playback\
-    \ time.\n 4. Count how many new aircraft land at the airport during this period.\n\
-    \ \n # RESULT FORMAT\n \n ```json\n {\n  \"count\": <N>\n }\n ```"
+  difficulty_level: easy
+  prompt: |-
+    # Read Geo Altitude and Vertical Rate
+
+    ## GOAL
+    Look up a single flight's geo altitude and vertical rate at a precise moment.
+
+    ## STEPS
+    1. Set the playback time to 16:00 UTC.
+    2. Pause the playback.
+    3. Search for flight **MSR726** using the search bar.
+    4. Open its flight details and scroll to the "Flight Data" section.
+    5. Read and report the geo altitude and vertical rate values.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "geo_altitude": "<value>",
+     "vertical_rate": "<value>"
+    }
+    ```
   gt:
-    answer: '{"count": 5}'
+    answer: '{"geo_altitude": "38,776 ft", "vertical_rate": "0 ft/min"}'
 - id: tc_frad_004
-  difficulty_level: medium
-  prompt: "# Count Aircraft Within a Circle at a Specific Time\n \n ## GOAL\n Count\
-    \ how many aircraft are located inside a defined radius around an airport.\n \n\
-    \ ## STEPS\n 1. Set the playback time to 11:41 UTC.\n 2. Search for **Thiruvananthapuram\
-    \ International Airport (TRV)** to center the map on it.\n 3. Draw a 450 km radius\
-    \ circle centered on the airport.\n 4. Count the number of aircraft located within\
-    \ this circle.\n \n # RESULT FORMAT\n \n ```json\n {\n  \"count\": <N>\n }\n ```"
+  difficulty_level: easy
+  prompt: |-
+    # Read a Flight's Route Endpoints
+
+    ## GOAL
+    Report the origin and destination airports of a single flight.
+
+    ## STEPS
+    1. Set the playback time to 16:00 UTC.
+    2. Search for flight **SAS907** using the search bar.
+    3. Open its flight details and read the route.
+    4. Report the origin and destination airport codes exactly as shown.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "origin": "<origin>",
+     "destination": "<destination>"
+    }
+    ```
   gt:
-    answer: '{"count": 4}'
+    answer: '{"origin": "OSL", "destination": "EWR"}'
 - id: tc_frad_005
-  difficulty_level: medium
-  prompt: "# Identify the First Departure After a Given Time\n \n ## GOAL\n Find the\
-    \ first flight that departs from an airport after a specific time.\n \n ## STEPS\n\
-    \ 1. Set the playback time to 11:30 UTC.\n 2. Zoom into **John F. Kennedy International\
-    \ Airport (JFK)** in New York.\n 3. Observe departures from the airport.\n 4.\
-    \ Identify the first flight that departs after this time.\n 5. Report that flight's\
-    \ callsign.\n \n # RESULT FORMAT\n \n ```json\n {\n  \"callsign\": \"<callsign>\"\
-    \n }\n ```"
+  difficulty_level: easy
+  prompt: |-
+    # Read a Flight's Ground Speed at Two Times
+
+    ## GOAL
+    Read the same telemetry field for one flight at two different playback times.
+
+    ## STEPS
+    1. Set the playback time to 11:15 UTC and pause the playback.
+    2. Search for flight **ASA1217** using the search bar and open its flight details.
+    3. Read its ground speed and note it down.
+    4. Set the playback time to 11:30 UTC, and read the ground speed of the same flight again.
+    5. Report both values exactly as shown.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "ground_speed_1115": "<value>",
+     "ground_speed_1130": "<value>"
+    }
+    ```
   gt:
-    answer: '{"callsign": "AAL1535"}'
+    answer: '{"ground_speed_1115": "480 kts", "ground_speed_1130": "474 kts"}'
 - id: tc_frad_006
-  difficulty_level: medium
-  prompt: "# Determine a Border Crossing Time (Canada to US)\n \n ## GOAL\n Track\
-    \ a flight and report the exact time it crosses the Canada–United States border.\n\
-    \ \n ## STEPS\n 1. Set the playback time to 16:00 UTC.\n 2. Search for flight\
-    \ **SAS907** using the search bar.\n 3. Locate the flight on the map and begin\
-    \ tracking it forward in time.\n 4. Report the UTC time at which it crosses the\
-    \ Canada–United States border.\n \n # RESULT FORMAT\n \n ```json\n {\n  \"crossing_time_utc\"\
-    : \"<HH:MM UTC>\"\n }\n ```"
+  difficulty_level: easy
+  prompt: |-
+    # Count Aircraft Inside a Radius Around Salzburg
+
+    ## GOAL
+    Use the radius tool to count the aircraft around a single airport at one moment.
+
+    ## STEPS
+    1. Set the playback time to 16:30 UTC.
+    2. Pause the playback.
+    3. Search for **Salzburg Airport (SZG)** to center the map on it.
+    4. Draw a 50 km radius circle around the airport.
+    5. Count the aircrafts inside the circle.
+    6. Report that number.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "count": <N>
+    }
+    ```
   gt:
-    answer: '{"crossing_time_utc": "16:35 UTC"}'
+    answer: '{"count": 3}'
 - id: tc_frad_007
-  difficulty_level: medium
-  prompt: "# Identify the First Channel Crossing (UK to France)\n \n ## GOAL\n Find\
-    \ the first flight to cross from England into France over the English Channel\
-    \ after a given time.\n \n ## STEPS\n 1. Set the playback time to 16:08 UTC.\n\
-    \ 2. Zoom into the narrowest part of the English Channel.\n 3. Identify all flights\
-    \ that were over England at 16:08 UTC.\n 4. Observe which of those flights is\
-    \ the first to cross into France.\n 5. Report that flight's callsign.\n \n # RESULT\
-    \ FORMAT\n \n ```json\n {\n  \"callsign\": \"<callsign>\"\n }\n ```"
+  difficulty_level: easy
+  prompt: |-
+    # Read the Geo Altitude of the Eastern Flight
+
+    ## GOAL
+    Decide which of two flights is further east on the map, then report the geo altitude of that flight only.
+
+    ## STEPS
+    1. Set the playback time to 16:20 UTC.
+    2. Pause the playback.
+    3. Search for flight **AFR24NL** and note its position on the map.
+    4. Search for flight **RYR61XN** and note its position on the map.
+    5. Determine which of the two flights is further east.
+    6. Open the details of that flight and report its callsign and its geo altitude exactly as shown.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "callsign": "<callsign>",
+     "geo_altitude": "<value>"
+    }
+    ```
   gt:
-    answer: '{"callsign": "TOM7KW"}'
+    answer: '{"callsign": "AFR24NL", "geo_altitude": "32,451 ft"}'
 - id: tc_frad_008
-  difficulty_level: medium
-  prompt: "# Find the Last Flight to Leave a Circle\n \n ## GOAL\n Determine which\
-    \ flight is the last to exit a radius around a given airport.\n \n ## STEPS\n\
-    \ 1. Set the playback time to 16:00 UTC.\n 2. Navigate to **Karlovy Vary Airport**.\n\
-    \ 3. Draw a 40 km radius circle around the airport.\n 4. Identify all flights\
-    \ currently inside the circle.\n 5. Track them forward in time and determine which\
-    \ flight leaves the circle last.\n 6. Report that flight's callsign.\n \n # RESULT\
-    \ FORMAT\n \n ```json\n {\n  \"callsign\": \"<callsign>\"\n }\n ```"
+  difficulty_level: easy
+  prompt: |-
+    # Find the Minute a Flight Leaves the Ground
+
+    ## GOAL
+    Use the timeline to find the exact minute at which a flight's status changes.
+
+    ## STEPS
+    1. Set the playback time to 14:22 UTC and pause the playback.
+    2. Search for flight **EZY14GQ** and open its flight details. At this moment its status is "On Ground".
+    3. Wait until the status is no longer "On Ground".
+    4. Report the first UTC minute at which the new status appears, and that status exactly as shown.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "status_change_utc": "<HH:MM UTC>",
+     "new_status": "<status>"
+    }
+    ```
   gt:
-    answer: '{"callsign": "TVS5AD"}'
+    answer: '{"status_change_utc": "14:23 UTC", "new_status": "Airborne"}'
 - id: tc_frad_009
-  difficulty_level: medium
-  prompt: "# Count Airborne Aircraft Near an Airport\n \n ## GOAL\n Count how many\
-    \ aircraft within a radius of a given airport have an \"Airborne\" status.\n \n\
-    \ ## STEPS\n 1. Set the playback time to 16:00 UTC.\n 2. Search for airport **ORY**\
-    \ to center the map on it.\n 3. Zoom in exactly 3 steps.\n 4. Within a 20 km radius\
-    \ of ORY, open the details of each aircraft in view.\n 5. Count how many have\
-    \ an \"Airborne\" status at 16:00 UTC and collect their callsigns.\n \n # RESULT\
-    \ FORMAT\n \n ```json\n {\n  \"count\": <N>,\n  \"callsigns\": [\"<CS1>\", \"\
-    <CS2>\", \"...\"]\n }\n ```"
+  difficulty_level: easy
+  prompt: |-
+    # Identify an Aircraft by Clicking It on the Map
+
+    ## GOAL
+    Open a flight's details by clicking its icon on the map instead of searching for its callsign.
+
+    ## STEPS
+    1. Set the playback time to 14:00 UTC.
+    2. Search for airport **ICN** to center the map on it.
+    3. Click the aircraft icon that is closest to the airport marker.
+    4. Report that aircraft's callsign and its destination airport code exactly as shown.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "callsign": "<callsign>",
+     "destination": "<destination>"
+    }
+    ```
   gt:
-    answer: '{"count": 5, "callsigns": ["CTM3813", "TVF3828", "EJU54MG", "TVF3124",
-      "FMY8055"]}'
+    answer: '{"callsign": "KAL8349", "destination": "DPS"}'
 - id: tc_frad_010
   difficulty_level: medium
-  prompt: "# Check Whether a Flight Path Enters a Circle\n\n## GOAL\nDetermine whether\
-    \ a specific flight's path ever enters a defined radius around an airport.\n\n\
-    ## STEPS\n1. Set the playback time to 11:15 UTC.\n2. Search for **Missoula Montana\
-    \ Airport (MSO)** to center the map on it.\n3. Draw a 500 km radius circle centered\
-    \ on the airport.\n4. Search for flight **ASA1217** and identify the flight closest\
-    \ to **ASA1217** at that moment whose track crosses the 500 km radius circle.\n\
-    5. Report the callsign of that closest flight.\n\n# RESULT FORMAT\n\n```json\n\
-    {\n  \"callsign\": \"<callsign>\"\n}\n```"
+  prompt: |-
+    # Count Landings at an Airport Over a Time Window
+
+    ## GOAL
+    Observe an airport and count how many aircraft land during a specified period.
+
+    ## STEPS
+    1. Set the playback time to 16:14 UTC.
+    2. Navigate to **Budapest Ferenc Liszt Airport (BUD)**.
+    3. Observe the airport for 10 minutes of playback time.
+    4. Count how many new aircraft land at the airport during this period.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "count": <N>
+    }
+    ```
   gt:
-    answer: '{"callsign": "N213AL"}'
+    answer: '{"count": 5}'
 - id: tc_frad_011
   difficulty_level: medium
-  prompt: "# Detect a Border Crossing (Poland to Germany)\n \n ## GOAL\n Find the\
-    \ first aircraft whose track crosses from Poland into Germany after a given time.\n\
-    \ \n ## STEPS\n 1. Set the playback time to 16:00 UTC.\n 2. Navigate to the Germany–Poland\
-    \ border region.\n 3. Observe aircraft tracks crossing the border.\n 4. Identify\
-    \ the first aircraft that crosses from Poland into Germany (not the reverse direction)\
-    \ and does not re-enter Polish airspace afterward.\n 5. Confirm the crossing direction\
-    \ by comparing two successive positions — one before and one after the border.\n\
-    \ 6. Report that aircraft's callsign.\n \n # RESULT FORMAT\n \n ```json\n {\n\
-    \  \"callsign\": \"<callsign>\"\n }\n ```"
+  prompt: |-
+    # Count Aircraft Within a Circle at a Specific Time
+
+    ## GOAL
+    Count how many aircraft are located inside a defined radius around an airport.
+
+    ## STEPS
+    1. Set the playback time to 11:41 UTC.
+    2. Search for **Thiruvananthapuram International Airport (TRV)** to center the map on it.
+    3. Draw a 450 km radius circle centered on the airport.
+    4. Count the number of aircraft located within this circle.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "count": <N>
+    }
+    ```
+  gt:
+    answer: '{"count": 4}'
+- id: tc_frad_012
+  difficulty_level: medium
+  prompt: |-
+    # Identify the First Departure After a Given Time
+
+    ## GOAL
+    Find the first flight that departs from an airport after a specific time.
+
+    ## STEPS
+    1. Set the playback time to 11:30 UTC.
+    2. Zoom into **John F. Kennedy International Airport (JFK)** in New York.
+    3. Observe departures from the airport.
+    4. Identify the first flight that departs after this time.
+    5. Report that flight's callsign.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "callsign": "<callsign>"
+    }
+    ```
+  gt:
+    answer: '{"callsign": "AAL1535"}'
+- id: tc_frad_013
+  difficulty_level: medium
+  prompt: |-
+    # Determine a Border Crossing Time (Canada to US)
+
+    ## GOAL
+    Track a flight and report the exact time it crosses the Canada–United States border.
+
+    ## STEPS
+    1. Set the playback time to 16:00 UTC.
+    2. Search for flight **SAS907** using the search bar.
+    3. Locate the flight on the map and begin tracking it forward in time.
+    4. Report the UTC time at which it crosses the Canada–United States border.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "crossing_time_utc": "<HH:MM UTC>"
+    }
+    ```
+  gt:
+    answer: '{"crossing_time_utc": "16:35 UTC"}'
+- id: tc_frad_014
+  difficulty_level: medium
+  prompt: |-
+    # Identify the First Channel Crossing (UK to France)
+
+    ## GOAL
+    Find the first flight to cross from England into France over the English Channel after a given time.
+
+    ## STEPS
+    1. Set the playback time to 16:08 UTC.
+    2. Zoom into the narrowest part of the English Channel.
+    3. Identify all flights that were over England at 16:08 UTC.
+    4. Observe which of those flights is the first to cross into France.
+    5. Report that flight's callsign.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "callsign": "<callsign>"
+    }
+    ```
+  gt:
+    answer: '{"callsign": "TOM7KW"}'
+- id: tc_frad_015
+  difficulty_level: medium
+  prompt: |-
+    # Find the Last Flight to Leave a Circle
+
+    ## GOAL
+    Determine which flight is the last to exit a radius around a given airport.
+
+    ## STEPS
+    1. Set the playback time to 16:00 UTC.
+    2. Navigate to **Karlovy Vary Airport**.
+    3. Draw a 40 km radius circle around the airport.
+    4. Identify all flights currently inside the circle.
+    5. Track them forward in time and determine which flight leaves the circle last.
+    6. Report that flight's callsign.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "callsign": "<callsign>"
+    }
+    ```
+  gt:
+    answer: '{"callsign": "TVS5AD"}'
+- id: tc_frad_016
+  difficulty_level: medium
+  prompt: |-
+    # Count Airborne Aircraft Near an Airport
+
+    ## GOAL
+    Count how many aircraft within a radius of a given airport have an "Airborne" status.
+
+    ## STEPS
+    1. Set the playback time to 16:00 UTC.
+    2. Search for airport **ORY** to center the map on it.
+    3. Zoom in exactly 3 steps.
+    4. Within a 20 km radius of ORY, open the details of each aircraft in view.
+    5. Count how many have an "Airborne" status at 16:00 UTC and collect their callsigns.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "count": <N>,
+     "callsigns": ["<CS1>", "<CS2>", "..."]
+    }
+    ```
+  gt:
+    answer: '{"count": 5, "callsigns": ["CTM3813", "TVF3828", "EJU54MG", "TVF3124", "FMY8055"]}'
+- id: tc_frad_017
+  difficulty_level: medium
+  prompt: |-
+    # Check Whether a Flight Path Enters a Circle
+
+    ## GOAL
+    Determine whether a specific flight's path ever enters a defined radius around an airport.
+
+    ## STEPS
+    1. Set the playback time to 11:15 UTC.
+    2. Search for **Missoula Montana Airport (MSO)** to center the map on it.
+    3. Draw a 500 km radius circle centered on the airport.
+    4. Search for flight **ASA1217** and identify the flight closest to **ASA1217** at that moment whose track crosses the 500 km radius circle.
+    5. Report the callsign of that closest flight.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+      "callsign": "<callsign>"
+    }
+    ```
+  gt:
+    answer: '{"callsign": "N213AL"}'
+- id: tc_frad_018
+  difficulty_level: medium
+  prompt: |-
+    # Detect a Border Crossing (Poland to Germany)
+
+    ## GOAL
+    Find the first aircraft whose track crosses from Poland into Germany after a given time.
+
+    ## STEPS
+    1. Set the playback time to 16:00 UTC.
+    2. Navigate to the Germany–Poland border region.
+    3. Observe aircraft tracks crossing the border.
+    4. Identify the first aircraft that crosses from Poland into Germany (not the reverse direction) and does not re-enter Polish airspace afterward.
+    5. Confirm the crossing direction by comparing two successive positions — one before and one after the border.
+    6. Report that aircraft's callsign.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "callsign": "<callsign>"
+    }
+    ```
   gt:
     answer: '{"callsign": "LOT335"}'
-- id: tc_frad_012
+- id: tc_frad_019
   difficulty_level: hard
-  prompt: "# Count Airports Passed Along a Flight Path\n \n ## GOAL\n Track a flight\
-    \ over a period and count how many airports it passes within close proximity.\n\
-    \ \n ## STEPS\n 1. Set the playback time to 17:15 UTC.\n 2. Search for flight\
-    \ **SAS907** using the search bar and locate it on the map.\n 3. Track the flight\
-    \ for the next 30 minutes of playback time.\n 4. Count how many airports the flight\
-    \ passes within a 30 km radius and list their airport codes.\n \n # RESULT FORMAT\n\
-    \ \n ```json\n {\n  \"count\": <N>,\n  \"airports\": [\"<airport1>\", \"<airport2>\"\
-    , \"...\"]\n }\n ```"
+  prompt: |-
+    # Count Airports Passed Along a Flight Path
+
+    ## GOAL
+    Track a flight over a period and count how many airports it passes within close proximity.
+
+    ## STEPS
+    1. Set the playback time to 17:15 UTC.
+    2. Search for flight **SAS907** using the search bar and locate it on the map.
+    3. Track the flight for the next 30 minutes of playback time.
+    4. Count how many airports the flight passes within a 30 km radius and list their airport codes.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "count": <N>,
+     "airports": ["<airport1>", "<airport2>", "..."]
+    }
+    ```
   gt:
     answer: '{"count": 3, "airports": ["RUT", "ALB", "SWF"]}'
-- id: tc_frad_013
+- id: tc_frad_020
   difficulty_level: hard
-  prompt: "# Detect the First Stable East-to-West Ordering of Three Flights\n\n##\
-    \ GOAL\nDetermine the first time three aircraft reach a specified west-to-east\
-    \ ordering and keep it for a sustained period.\n\n## STEPS\n1. Set the playback\
-    \ time to 16:20 UTC.\n2. Search for flights **AFR24NL**, **RYR61XN**, and **BEL0GA**\
-    \ and track them forward in time.\n3. Find the first UTC minute when the west-to-east\
-    \ order of the flights becomes **BEL0GA** -> **AFR24NL** -> **RYR61XN**.\n4. Report\
-    \ that UTC time.\n\n# RESULT FORMAT\n\n```json\n{\n  \"order_start_utc\": \"<HH:MM\
-    \ UTC>\"\n}\n```"
+  prompt: |-
+    # Detect the First Stable East-to-West Ordering of Three Flights
+
+    ## GOAL
+    Determine the first time three aircraft reach a specified west-to-east ordering and keep it for a sustained period.
+
+    ## STEPS
+    1. Set the playback time to 16:20 UTC.
+    2. Search for flights **AFR24NL**, **RYR61XN**, and **BEL0GA** and track them forward in time.
+    3. Find the first UTC minute when the west-to-east order of the flights becomes **BEL0GA** -> **AFR24NL** -> **RYR61XN**.
+    4. Report that UTC time.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+      "order_start_utc": "<HH:MM UTC>"
+    }
+    ```
   gt:
     answer: '{"order_start_utc": "16:27 UTC"}'
-- id: tc_frad_014
+- id: tc_frad_021
   difficulty_level: hard
-  prompt: "# Count Country Borders Crossed from Track History\n \n ## GOAL\n Determine\
-    \ how many country borders a flight has crossed based on its visible track history.\n\
-    \ \n ## STEPS\n 1. Set the playback time to 16:00 UTC.\n 2. Search for flight\
-    \ **MSR726** using the search bar.\n 3. Examine the flight's visible track history\
-    \ (trajectory) as shown at the current moment.\n 4. Count how many country borders\
-    \ the track crosses and list each country entered.\n \n # RESULT FORMAT\n \n ```json\n\
-    \ {\n  \"num_country_borders\": <N>,\n  \"countries\": [\"<country1>\", \"<country2>\"\
-    , \"...\"]\n }\n ```"
+  prompt: |-
+    # Count Country Borders Crossed from Track History
+
+    ## GOAL
+    Determine how many country borders a flight has crossed based on its visible track history.
+
+    ## STEPS
+    1. Set the playback time to 16:00 UTC.
+    2. Search for flight **MSR726** using the search bar.
+    3. Examine the flight's visible track history (trajectory) as shown at the current moment.
+    4. Count how many country borders the track crosses and list each country entered.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "num_country_borders": <N>,
+     "countries": ["<country1>", "<country2>", "..."]
+    }
+    ```
   gt:
-    answer: '{"num_country_borders": 4, "countries": ["Belgium", "Germany", "Austria",
-      "Slovenia"]}'
+    answer: '{"num_country_borders": 4, "countries": ["Belgium", "Germany", "Austria", "Slovenia"]}'
   eval_config:
     tolerance_fields:
       num_country_borders: 1
-- id: tc_frad_015
+- id: tc_frad_022
   difficulty_level: hard
-  prompt: "# Find the Closest Aircraft and Its Overtake Time\n \n ## GOAL\n Locate\
-    \ the aircraft nearest to a given flight and determine when it overtakes that\
-    \ flight.\n \n ## STEPS\n 1. Set the playback time to 07:50 UTC.\n 2. Search for\
-    \ flight **VOE25HV** using the search bar.\n 3. Identify the aircraft currently\
-    \ closest to VOE25HV.\n 4. Track both aircraft forward in time.\n 5. Report the\
-    \ closest aircraft's callsign and the UTC time at which it overtakes (passes ahead\
-    \ of) VOE25HV.\n \n # RESULT FORMAT\n \n ```json\n {\n  \"closest_callsign\":\
-    \ \"<callsign>\",\n  \"overtake_time_utc\": \"<HH:MM UTC>\"\n }\n ```"
+  prompt: |-
+    # Find the Closest Aircraft and Its Overtake Time
+
+    ## GOAL
+    Locate the aircraft nearest to a given flight and determine when it overtakes that flight.
+
+    ## STEPS
+    1. Set the playback time to 07:50 UTC.
+    2. Search for flight **VOE25HV** using the search bar.
+    3. Identify the aircraft currently closest to VOE25HV.
+    4. Track both aircraft forward in time.
+    5. Report the closest aircraft's callsign and the UTC time at which it overtakes (passes ahead of) VOE25HV.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "closest_callsign": "<callsign>",
+     "overtake_time_utc": "<HH:MM UTC>"
+    }
+    ```
   gt:
     answer: '{"closest_callsign": "N656FN", "overtake_time_utc": "07:54 UTC"}'
-- id: tc_frad_016
+- id: tc_frad_023
   difficulty_level: hard
-  prompt: "# Find the Closest Aircraft Pair Near an Airport\n \n ## GOAL\n Among airborne\
-    \ aircraft near Zurich, find the two that are closest to each other.\n \n ## STEPS\n\
-    \ 1. Set the playback time to 16:00 UTC.\n 2. Zoom into Zurich, Switzerland.\n\
-    \ 3. Identify all aircraft within 40 km of the airport at the time. Exclude any\
-    \ aircraft on the ground in the airport area.\n 4. Determine which two airborne\
-    \ aircraft are closest to each other.\n 5. Report both callsigns. List the aircraft\
-    \ with the higher geographical altitude first.\n \n # RESULT FORMAT\n \n ```json\n\
-    \ {\n  \"aircraft_1_callsign\": \"<callsign>\",\n  \"aircraft_2_callsign\": \"\
-    <callsign>\"\n }\n ```"
+  prompt: |-
+    # Find the Closest Aircraft Pair Near an Airport
+
+    ## GOAL
+    Among airborne aircraft near Zurich, find the two that are closest to each other.
+
+    ## STEPS
+    1. Set the playback time to 16:00 UTC.
+    2. Zoom into Zurich, Switzerland.
+    3. Identify all aircraft within 40 km of the airport at the time. Exclude any aircraft on the ground in the airport area.
+    4. Determine which two airborne aircraft are closest to each other.
+    5. Report both callsigns. List the aircraft with the higher geographical altitude first.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+     "aircraft_1_callsign": "<callsign>",
+     "aircraft_2_callsign": "<callsign>"
+    }
+    ```
   gt:
     answer: '{"aircraft_1_callsign": "AFR33SD", "aircraft_2_callsign": "SWR60L"}'
-- id: tc_frad_017
+- id: tc_frad_024
   difficulty_level: hard
-  prompt: "# Detect the First Landing and First Departure from an Airport\n\n## GOAL\n\
-    Monitor one airport over a short time window and identify the first aircraft that\
-    \ lands and the first aircraft that departs after the start time.\n\n## STEPS\n\
-    1. Set the playback time to 10:05 UTC.\n2. Find Vienna Airport (VIE).\n3. Observe\
-    \ aircraft activity for the next 10 minutes of playback time.\n4. Identify:\n\
-    \   - the first aircraft that **departs** from the airport after the start time.\n\
-    \   - the aircraft that is **second** to **land** at the airport after the start\
-    \ time.\n5. Report both callsigns and their UTC times.\n\n## RESULT FORMAT\n\n\
-    ```json\n{\n  \"second_landing_callsign\": \"<callsign>\",\n  \"first_departure_callsign\"\
-    : \"<callsign>\"\n}\n```"
+  prompt: |-
+    # Detect the First Landing and First Departure from an Airport
+
+    ## GOAL
+    Monitor one airport over a short time window and identify the first aircraft that lands and the first aircraft that departs after the start time.
+
+    ## STEPS
+    1. Set the playback time to 10:05 UTC.
+    2. Find Vienna Airport (VIE).
+    3. Observe aircraft activity for the next 10 minutes of playback time.
+    4. Identify:
+       - the first aircraft that **departs** from the airport after the start time.
+       - the aircraft that is **second** to **land** at the airport after the start time.
+    5. Report both callsigns and their UTC times.
+
+    ## RESULT FORMAT
+
+    ```json
+    {
+      "second_landing_callsign": "<callsign>",
+      "first_departure_callsign": "<callsign>"
+    }
+    ```
   gt:
-    answer: "{\n  \"second_landing_callsign\": \"AUA87\",\n  \"first_departure_callsign\"\
-      : \"AUA7F\"\n}"
-- id: tc_frad_018
+    answer: |-
+      {
+        "second_landing_callsign": "AUA87",
+        "first_departure_callsign": "AUA7F"
+      }
+- id: tc_frad_025
   difficulty_level: hard
-  prompt: "# Find the Previous Departure Before a Target Flight\n\n## GOAL\nMonitor\
-    \ departures from **Manchester Airport** within a defined radius and identify\
-    \ which flight departed immediately **before** a given target flight.\n\n## STEPS\n\
-    1. Set the playback time to 14:22 UTC.\n2. Search for **Manchester Airport (MAN)**.\n\
-    3. Draw a **10 km** radius circle centered on the airport.\n4. Monitor departures\
-    \ from the airport.\n5. Locate the departure of flight **EZY14GQ**.\n6. Determine\
-    \ which flight **departed from Manchester Airport immediately before** **EZY14GQ**.\n\
-    7. Report:\n   - the previous flight callsign,\n   - the UTC time when the previous\
-    \ flight left the radius circle.\n\n## RESULT FORMAT\n\n```json\n{\n  \"previous_callsign\"\
-    : \"<callsign>\",\n  \"previous_left_time\": \"<HH:MM UTC>\"\n}\n```"
+  prompt: |-
+    # Find the Previous Departure Before a Target Flight
+
+    ## GOAL
+    Monitor departures from **Manchester Airport** within a defined radius and identify which flight departed immediately **before** a given target flight.
+
+    ## STEPS
+    1. Set the playback time to 14:22 UTC.
+    2. Search for **Manchester Airport (MAN)**.
+    3. Draw a **10 km** radius circle centered on the airport.
+    4. Monitor departures from the airport.
+    5. Locate the departure of flight **EZY14GQ**.
+    6. Determine which flight **departed from Manchester Airport immediately before** **EZY14GQ**.
+    7. Report:
+       - the previous flight callsign,
+       - the UTC time when the previous flight left the radius circle.
+
+    ## RESULT FORMAT
+
+    ```json
+    {
+      "previous_callsign": "<callsign>",
+      "previous_left_time": "<HH:MM UTC>"
+    }
+    ```
   gt:
-    answer: "{\n  \"previous_callsign\": \"RUK6797\",\n  \"previous_left_time\": \"\
-      14:25 UTC\",\n}"
-- id: tc_frad_019
+    answer: |-
+      {
+        "previous_callsign": "RUK6797",
+        "previous_left_time": "14:25 UTC"
+      }
+- id: tc_frad_026
   difficulty_level: hard
-  prompt: "# Identify the Last Remaining Flight Inside a Zone\n\n## GOAL\nAmong several\
-    \ flights near an airport, determine which one is the last to remain inside a\
-    \ monitored radius.\n\n## STEPS\n1. Set the playback time to 16:21 UTC.\n2. Search\
-    \ for airport **XCR** and draw a 50 km radius circle around it.\n3. Locate flights\
-    \ **SWR441R**, **UAE4PV**, **THY6FE**, and **S5BBC** in the area.\n4. Track all\
-    \ four flights forward in time.\n5. Determine the moment when all of those flights\
-    \ left the circle.\n6. Report:\n   - the UTC time when all 4 initial flights left\
-    \ the circle,\n   - the callsign of the first new flight entering the circle,\n\
-    \   - the first UTC time when the circle contains 4 new flights.\n\n# RESULT FORMAT\n\
-    \n```json\n{\n  \"initial_left_utc\": \"<HH:MM UTC>\",\n  \"first_new_callsign\"\
-    : \"<callsign>\",\n  \"first_time_with_four_new_utc\": \"<HH:MM UTC>\"\n}\n```"
+  prompt: |-
+    # Identify the Last Remaining Flight Inside a Zone
+
+    ## GOAL
+    Among several flights near an airport, determine which one is the last to remain inside a monitored radius.
+
+    ## STEPS
+    1. Set the playback time to 16:21 UTC.
+    2. Search for airport **XCR** and draw a 50 km radius circle around it.
+    3. Locate flights **SWR441R**, **UAE4PV**, **THY6FE**, and **S5BBC** in the area.
+    4. Track all four flights forward in time.
+    5. Determine the moment when all of those flights left the circle.
+    6. Report:
+       - the UTC time when all 4 initial flights left the circle,
+       - the callsign of the first new flight entering the circle,
+       - the first UTC time when the circle contains 4 new flights.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+      "initial_left_utc": "<HH:MM UTC>",
+      "first_new_callsign": "<callsign>",
+      "first_time_with_four_new_utc": "<HH:MM UTC>"
+    }
+    ```
   gt:
-    answer: "{\n  \"initial_left_utc\": \"16:25 UTC\",\n  \"first_new_callsign\":\
-      \ \"EJU79XU\",\n  \"first_time_with_four_new_utc\": \"16:28 UTC\"\n}"
-- id: tc_frad_020
+    answer: |-
+      {
+        "initial_left_utc": "16:25 UTC",
+        "first_new_callsign": "EJU79XU",
+        "first_time_with_four_new_utc": "16:28 UTC"
+      }
+- id: tc_frad_027
   difficulty_level: hard
-  prompt: "# Track a Two-Stage Zone Transition for Two Flights\n\n## GOAL\nDetermine\
-    \ a multi-step temporal relationship between two flights around the same airport.\n\
-    \n## STEPS\n1. Set the playback time to 11:43 UTC.\n2. Search for the target airport,\
-    \ **Ostend-Bruges International Airport (OST)**.\n3. Identify the two approaching\
-    \ flights that will be the first new flights to enter a 35 km radius zone around\
-    \ the airport.\n4. Find the first UTC time when **exactly one** of the two flights\
-    \ enters the 35 km zone around the airport.\n5. Continue tracking until **both**\
-    \ flights are outside the circle.\n6. Report:\n   - the first time either of the\
-    \ two planes enters the zone,\n   - which flight is the second to be inside the\
-    \ zone,\n   - the UTC time when both flights finally exit the zone.\n\n# RESULT\
-    \ FORMAT\n\n```json\n{\n  \"any_enters_utc\": \"<HH:MM UTC>\",\n  \"last_inside_callsign\"\
-    : \"<callsign>\",\n  \"final_exit_time_utc\": \"<HH:MM UTC>\"\n}\n```"
+  prompt: |-
+    # Track a Two-Stage Zone Transition for Two Flights
+
+    ## GOAL
+    Determine a multi-step temporal relationship between two flights around the same airport.
+
+    ## STEPS
+    1. Set the playback time to 11:43 UTC.
+    2. Search for the target airport, **Ostend-Bruges International Airport (OST)**.
+    3. Identify the two approaching flights that will be the first new flights to enter a 35 km radius zone around the airport.
+    4. Find the first UTC time when **exactly one** of the two flights enters the 35 km zone around the airport.
+    5. Continue tracking until **both** flights are outside the circle.
+    6. Report:
+       - the first time either of the two planes enters the zone,
+       - which flight is the second to be inside the zone,
+       - the UTC time when both flights finally exit the zone.
+
+    # RESULT FORMAT
+
+    ```json
+    {
+      "any_enters_utc": "<HH:MM UTC>",
+      "last_inside_callsign": "<callsign>",
+      "final_exit_time_utc": "<HH:MM UTC>"
+    }
+    ```
   gt:
-    answer: '{"any_enters_utc": "11:44 UTC", "last_inside_callsign": "RYR496K", "final_exit_time_utc":
-      "11:50 UTC"}'
+    answer: '{"any_enters_utc": "11:44 UTC", "last_inside_callsign": "RYR496K", "final_exit_time_utc": "11:50 UTC"}'

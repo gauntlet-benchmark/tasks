@@ -1,140 +1,79 @@
 {
-  "id": "7e1624e8-d170-48d6-ada2-3f62bc028170",
-  "name": "API Data Pipeline",
-  "createdAt": 1764595985088,
-  "updatedAt": 1777125593301,
+  "id": "555243dc-a96a-426b-8c73-85f49c355ffe",
+  "name": "Range → Map → Table",
+  "createdAt": 1777051445875,
+  "updatedAt": 1777051522960,
   "version": 1,
   "metadata": {
-    "description": "Fetch data from an API, transform it, and aggregate results.",
-    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgMTUyOCA2MCc+PGxpbmUgeDE9JzYwJyB5MT0nMzYnIHgyPSczNzInIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9Jzg2MCcgeTE9JzM2JyB4Mj0nMTE1NicgeTI9JzM2JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48bGluZSB4MT0nMTE5NicgeTE9JzM2JyB4Mj0nMTUwOCcgeTI9JzM2JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48bGluZSB4MT0nNDEyJyB5MT0nMzYnIHgyPSc4MjAnIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PHJlY3QgeD0nMjAnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzI2JyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPm1hbnVhbFRyaWdnZTwvdGV4dD48cmVjdCB4PSczNzInIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzM3OCcgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5odHRwUmVxdWVzdDwvdGV4dD48cmVjdCB4PSc4MjAnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzgyNicgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5tYXA8L3RleHQ+PHJlY3QgeD0nMTUwOCcgeT0nMjAnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nMTUxNCcgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5zb3J0PC90ZXh0PjxyZWN0IHg9JzExNTYnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzExNjInIHk9JzQwJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+ZmlsdGVyPC90ZXh0Pjwvc3ZnPg=="
+    "description": "",
+    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgNjI4IDY0Jz48bGluZSB4MT0nNjAnIHkxPSczNicgeDI9JzI3MCcgeTI9JzM2JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48bGluZSB4MT0nMzEwJyB5MT0nMzYnIHgyPSc2MDgnIHkyPSc2MCcgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PHJlY3QgeD0nMjAnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzI2JyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPnJhbmdlR2VuZXJhdDwvdGV4dD48cmVjdCB4PScyNzAnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzI3NicgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5tYXA8L3RleHQ+PHJlY3QgeD0nNjA4JyB5PSc0NCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PSc2MTQnIHk9JzY0JyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+ZmlsdGVyPC90ZXh0Pjwvc3ZnPg=="
   },
   "graph": {
     "nodes": [
       {
-        "id": "trigger-1",
-        "type": "manualTrigger",
+        "id": "n1",
+        "type": "rangeGenerator",
         "position": {
-          "x": -336,
-          "y": 192
-        },
-        "data": {},
-        "width": 303,
-        "height": 141,
-        "selected": false,
-        "positionAbsolute": {
-          "x": -336,
-          "y": 192
-        },
-        "dragging": false
-      },
-      {
-        "id": "http-1",
-        "type": "httpRequest",
-        "position": {
-          "x": 16,
-          "y": 192
+          "x": 100,
+          "y": 200
         },
         "data": {
-          "method": "GET",
-          "url": "https://jsonplaceholder.typicode.com/users",
-          "headers": {},
-          "body": ""
+          "start": 1,
+          "stop": 5,
+          "step": 1
         },
-        "width": 387,
-        "height": 141,
+        "width": 150,
+        "height": 22,
         "selected": false,
-        "positionAbsolute": {
-          "x": 16,
-          "y": 192
-        },
         "dragging": false
       },
       {
-        "id": "map-1",
+        "id": "n2",
         "type": "map",
         "position": {
-          "x": 464,
-          "y": 192
+          "x": 350,
+          "y": 200
         },
         "data": {
-          "expression": "({ id: item.id, name: item.name, email: item.email, city: item.address?.city })"
+          "expression": "{ squared: item.value * item.value }"
         },
         "width": 303,
         "height": 141,
         "selected": false,
-        "positionAbsolute": {
-          "x": 464,
-          "y": 192
-        },
         "dragging": false
       },
       {
-        "id": "sort-1",
-        "type": "sort",
-        "position": {
-          "x": 1152,
-          "y": 192
-        },
-        "data": {
-          "field": "email",
-          "direction": "desc"
-        },
-        "width": 276,
-        "height": 141,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 1152,
-          "y": 192
-        },
-        "dragging": false
-      },
-      {
-        "id": "7025ff37-b340-4ea4-b1df-80d2f655876f",
+        "id": "87f20171-2889-41d7-8fc2-a90da6eba98b",
         "type": "filter",
         "position": {
-          "x": 800,
-          "y": 192
+          "x": 688,
+          "y": 224
         },
         "data": {
-          "predicate": "item.email.includes(\".org\")"
+          "predicate": "item.value > 10"
         },
         "width": 312,
         "height": 141,
-        "selected": false,
+        "selected": true,
+        "dragging": false,
         "positionAbsolute": {
-          "x": 800,
-          "y": 192
-        },
-        "dragging": false
+          "x": 688,
+          "y": 224
+        }
       }
     ],
     "edges": [
       {
         "id": "e1",
-        "source": "trigger-1",
-        "target": "http-1",
-        "sourceHandle": "trigger"
+        "source": "n1",
+        "target": "n2"
       },
       {
-        "source": "map-1",
+        "source": "n2",
         "sourceHandle": null,
-        "target": "7025ff37-b340-4ea4-b1df-80d2f655876f",
+        "target": "87f20171-2889-41d7-8fc2-a90da6eba98b",
         "targetHandle": null,
-        "id": "reactflow__edge-map-1-7025ff37-b340-4ea4-b1df-80d2f655876f"
-      },
-      {
-        "source": "7025ff37-b340-4ea4-b1df-80d2f655876f",
-        "sourceHandle": null,
-        "target": "sort-1",
-        "targetHandle": null,
-        "id": "reactflow__edge-7025ff37-b340-4ea4-b1df-80d2f655876f-sort-1"
-      },
-      {
-        "source": "http-1",
-        "sourceHandle": null,
-        "target": "map-1",
-        "targetHandle": null,
-        "id": "reactflow__edge-http-1-map-1"
+        "id": "reactflow__edge-n2-87f20171-2889-41d7-8fc2-a90da6eba98b"
       }
     ]
   }

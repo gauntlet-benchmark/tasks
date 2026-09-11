@@ -1,0 +1,173 @@
+{
+  "id": "de4ed620-e521-493d-a5cb-34fca5e1774b",
+  "name": "Untitled Scene",
+  "createdAt": 1776260849186,
+  "updatedAt": 1776263640387,
+  "version": 1,
+  "metadata": {
+    "description": "",
+    "thumbnail": null
+  },
+  "scene": {
+    "objects": [
+      {
+        "id": "cube-411fb22c-7691-446a-a2f3-db81ac69736a",
+        "type": "cube",
+        "name": "Tabletop",
+        "visible": true,
+        "locked": false,
+        "position": [
+          0,
+          4.2,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          4,
+          0.4,
+          4
+        ],
+        "color": "#ffffff",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "cylinder-172b6778-ed35-4b3c-af58-d6480ca63229",
+        "type": "cylinder",
+        "name": "Tableleg",
+        "visible": true,
+        "locked": false,
+        "position": [
+          1.5,
+          2,
+          1.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.5,
+          4,
+          0.5
+        ],
+        "color": "#ffffff",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "cylinder-b340855f-8b23-462a-b328-80b7a770cd4a",
+        "type": "cylinder",
+        "name": "Tableleg",
+        "visible": true,
+        "locked": false,
+        "position": [
+          -1.5,
+          2,
+          1.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.5,
+          4,
+          0.5
+        ],
+        "color": "#ffffff",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "cylinder-0a0bda82-0319-4c64-ab97-fc67655b919d",
+        "type": "cylinder",
+        "name": "Tableleg",
+        "visible": true,
+        "locked": false,
+        "position": [
+          1.5,
+          2,
+          -1.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.5,
+          4,
+          0.5
+        ],
+        "color": "#ffffff",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "cylinder-bbe15906-86f6-4913-b092-44cff2bc32d7",
+        "type": "cylinder",
+        "name": "Tableleg",
+        "visible": true,
+        "locked": false,
+        "position": [
+          -1.5,
+          2,
+          -1.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.5,
+          4,
+          0.5
+        ],
+        "color": "#ffffff",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "sphere-4740d0bb-ad3f-4121-9012-62b745d31dfe",
+        "type": "sphere",
+        "name": "Ball",
+        "visible": true,
+        "locked": false,
+        "position": [
+          0,
+          4.9,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "color": "#ffffff",
+        "opacity": 1,
+        "wireframe": false
+      }
+    ],
+    "settings": {
+      "showGrid": true,
+      "showAxes": true,
+      "backgroundColor": "#1a1a2e",
+      "fov": 50,
+      "cameraType": "perspective",
+      "orthoZoom": 10
+    }
+  }
+}

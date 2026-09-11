@@ -1,91 +1,109 @@
 {
-  "id": "da68991f-291c-48a2-b20b-e2b5d4317fcc",
-  "name": "Range → Map → Table",
-  "createdAt": 1776166622496,
-  "updatedAt": 1776166710079,
+  "id": "f321147a-37ee-4758-9e17-b98cf015e1e1",
+  "name": "API Data Pipeline",
+  "createdAt": 1764595985088,
+  "updatedAt": 1785567775570,
   "version": 1,
   "metadata": {
-    "description": "",
-    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgODQwIDcyJz48bGluZSB4MT0nNjAnIHkxPSc2OCcgeDI9JzIxMicgeTI9JzM2JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48bGluZSB4MT0nNTg4JyB5MT0nMzYnIHgyPSc4MjAnIHkyPSc2OCcgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzI1MicgeTE9JzM2JyB4Mj0nNTQ4JyB5Mj0nMzYnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxyZWN0IHg9JzIwJyB5PSc1Micgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PScyNicgeT0nNzInIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5yYW5nZUdlbmVyYXQ8L3RleHQ+PHJlY3QgeD0nMjEyJyB5PScyMCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PScyMTgnIHk9JzQwJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+bWFwPC90ZXh0PjxyZWN0IHg9JzgyMCcgeT0nNTInIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nODI2JyB5PSc3MicgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPnRhYmxlUHJldmlldzwvdGV4dD48cmVjdCB4PSc1NDgnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzU1NCcgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5mb3JtdWxhPC90ZXh0Pjwvc3ZnPg=="
+    "description": "Fetch data from an API, transform it, and aggregate results.",
+    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgMTYyNCA2MCc+PGxpbmUgeDE9JzYwJyB5MT0nMzYnIHgyPSc0MjAnIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzQ2MCcgeTE9JzM2JyB4Mj0nODg0JyB5Mj0nMzYnIHN0cm9rZT0nIzY0NzQ4Yicgc3Ryb2tlLXdpZHRoPScyJyAvPjxsaW5lIHgxPSc5MjQnIHkxPSczNicgeDI9JzEyNTInIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PGxpbmUgeDE9JzEyOTInIHkxPSczNicgeDI9JzE2MDQnIHkyPSczNicgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PHJlY3QgeD0nMjAnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzI2JyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPm1hbnVhbFRyaWdnZTwvdGV4dD48cmVjdCB4PSc0MjAnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzQyNicgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5odHRwUmVxdWVzdDwvdGV4dD48cmVjdCB4PSc4ODQnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9Jzg5MCcgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5tYXA8L3RleHQ+PHJlY3QgeD0nMTI1MicgeT0nMjAnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nMTI1OCcgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5zb3J0PC90ZXh0PjxyZWN0IHg9JzE2MDQnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzE2MTAnIHk9JzQwJyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+bGltaXQ8L3RleHQ+PC9zdmc+"
   },
   "graph": {
     "nodes": [
       {
-        "id": "n1",
-        "type": "rangeGenerator",
+        "id": "trigger-1",
+        "type": "manualTrigger",
         "position": {
-          "x": 48,
-          "y": 320
+          "x": -336,
+          "y": 192
         },
-        "data": {
-          "start": 1,
-          "stop": 5,
-          "step": 1
-        },
-        "width": 150,
-        "height": 22,
+        "data": {},
+        "width": 314,
+        "height": 141,
         "selected": false,
         "positionAbsolute": {
-          "x": 48,
-          "y": 320
+          "x": -336,
+          "y": 192
         },
         "dragging": false
       },
       {
-        "id": "n2",
+        "id": "http-1",
+        "type": "httpRequest",
+        "position": {
+          "x": 64,
+          "y": 192
+        },
+        "data": {
+          "method": "GET",
+          "url": "https://jsonplaceholder.typicode.com/users",
+          "headers": {},
+          "body": ""
+        },
+        "width": 408,
+        "height": 141,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 64,
+          "y": 192
+        },
+        "dragging": false
+      },
+      {
+        "id": "map-1",
         "type": "map",
         "position": {
-          "x": 240,
-          "y": 288
+          "x": 528,
+          "y": 192
         },
         "data": {
-          "expression": "{ squared: item.value * item.value }"
+          "expression": "({ id: item.id, name: item.name, email: item.email, city: item.address?.city })"
         },
-        "width": 303,
+        "width": 320,
         "height": 141,
         "selected": false,
         "positionAbsolute": {
-          "x": 240,
-          "y": 288
+          "x": 528,
+          "y": 192
         },
         "dragging": false
       },
       {
-        "id": "n3",
-        "type": "tablePreview",
+        "id": "sort-1",
+        "type": "sort",
         "position": {
-          "x": 848,
-          "y": 320
+          "x": 896,
+          "y": 192
         },
         "data": {
-          "limit": 50
+          "field": "city",
+          "direction": "desc"
         },
-        "width": 150,
-        "height": 22,
+        "width": 291,
+        "height": 141,
         "selected": false,
         "positionAbsolute": {
-          "x": 848,
-          "y": 320
+          "x": 896,
+          "y": 192
         },
         "dragging": false
       },
       {
-        "id": "f3a32ba8-a56d-400a-ab5e-a25b96b17ab0",
-        "type": "formula",
+        "id": "limit-1",
+        "type": "limit",
         "position": {
-          "x": 576,
-          "y": 288
+          "x": 1248,
+          "y": 192
         },
         "data": {
-          "field": "double",
-          "expression": "item.value * 2"
+          "n": 5
         },
-        "width": 242,
+        "width": 291,
         "height": 141,
-        "selected": true,
+        "selected": false,
         "positionAbsolute": {
-          "x": 576,
-          "y": 288
+          "x": 1248,
+          "y": 192
         },
         "dragging": false
       }
@@ -93,22 +111,24 @@
     "edges": [
       {
         "id": "e1",
-        "source": "n1",
-        "target": "n2"
+        "source": "trigger-1",
+        "target": "http-1",
+        "sourceHandle": "trigger"
       },
       {
-        "source": "f3a32ba8-a56d-400a-ab5e-a25b96b17ab0",
-        "sourceHandle": null,
-        "target": "n3",
-        "targetHandle": null,
-        "id": "reactflow__edge-f3a32ba8-a56d-400a-ab5e-a25b96b17ab0-n3"
+        "id": "e2",
+        "source": "http-1",
+        "target": "map-1"
       },
       {
-        "source": "n2",
-        "sourceHandle": null,
-        "target": "f3a32ba8-a56d-400a-ab5e-a25b96b17ab0",
-        "targetHandle": null,
-        "id": "reactflow__edge-n2-f3a32ba8-a56d-400a-ab5e-a25b96b17ab0"
+        "id": "e3",
+        "source": "map-1",
+        "target": "sort-1"
+      },
+      {
+        "id": "e4",
+        "source": "sort-1",
+        "target": "limit-1"
       }
     ]
   }

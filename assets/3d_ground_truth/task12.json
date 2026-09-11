@@ -1,8 +1,8 @@
 {
-  "id": "730c95ce-5cd4-4190-805f-cbfc14613d84",
+  "id": "02deb39d-dd4d-4043-8205-0694a2d44d64",
   "name": "Geometric Garden",
-  "createdAt": 1775823095627,
-  "updatedAt": 1775823095627,
+  "createdAt": 1775561628884,
+  "updatedAt": 1775561628884,
   "version": 1,
   "metadata": {
     "description": "",
@@ -11,7 +11,7 @@
   "scene": {
     "objects": [
       {
-        "id": "bb94c09c-5a9a-44e3-a4b4-94107190de42",
+        "id": "f93a720a-5b0b-4229-9a7a-8cd6278c768d",
         "type": "cube",
         "name": "Stone Block",
         "visible": true,
@@ -36,13 +36,13 @@
         "wireframe": false
       },
       {
-        "id": "66c642a8-66f0-4018-b281-6ea6f380dd48",
+        "id": "fea330d5-58ab-411e-8855-30d370a5f691",
         "type": "sphere",
         "name": "Garden Ball",
         "visible": true,
         "locked": false,
         "position": [
-          0,
+          3,
           0.75,
           0
         ],
@@ -56,18 +56,18 @@
           1.5,
           1.5
         ],
-        "color": "#66aa44",
+        "color": "#ff0000",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "c1ab6787-e1eb-4219-88ae-4f50a18644ae",
+        "id": "d0d1635e-26ef-454b-870b-08b2228f2b77",
         "type": "cylinder",
         "name": "Pillar",
         "visible": true,
         "locked": false,
         "position": [
-          0,
+          -3,
           1,
           0
         ],
@@ -86,7 +86,7 @@
         "wireframe": false
       },
       {
-        "id": "26d1d146-27d7-4168-be8d-a799f66e5f7a",
+        "id": "ee163bb9-f884-46cc-a158-1c041851e412",
         "type": "cone",
         "name": "Tree Top",
         "visible": true,
@@ -94,7 +94,7 @@
         "position": [
           0,
           2.5,
-          0
+          3
         ],
         "rotation": [
           0,
@@ -111,7 +111,7 @@
         "wireframe": false
       },
       {
-        "id": "36378d35-92fa-4572-a255-e4aaa388e77d",
+        "id": "7e4d0921-21a1-4868-9db7-b1ee4731f216",
         "type": "torus",
         "name": "Ring",
         "visible": true,
@@ -119,7 +119,7 @@
         "position": [
           0,
           1.5,
-          0
+          -3
         ],
         "rotation": [
           90,

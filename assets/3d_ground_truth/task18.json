@@ -1,8 +1,8 @@
 {
-  "id": "c58082e7-5cce-43b9-87a8-89d46685a195",
+  "id": "349fad10-0c20-437d-a4b8-29e02bb46c25",
   "name": "Row of Objects Scene",
-  "createdAt": 1777018927871,
-  "updatedAt": 1777018927871,
+  "createdAt": 1776960479109,
+  "updatedAt": 1776960479109,
   "version": 1,
   "metadata": {
     "description": "",
@@ -11,13 +11,13 @@
   "scene": {
     "objects": [
       {
-        "id": "fc816501-71f9-4ca0-8adb-80f798094031",
+        "id": "3314c063-112d-4d6b-b57a-587330661a75",
         "type": "cube",
         "name": "Cube 1",
         "visible": true,
         "locked": false,
         "position": [
-          6,
+          0,
           0,
           0
         ],
@@ -36,13 +36,13 @@
         "wireframe": false
       },
       {
-        "id": "abfc06a1-ed00-4eed-9a0d-ae92d9130b74",
+        "id": "cb585880-0229-450f-90d0-91b3d9cb789d",
         "type": "sphere",
         "name": "Sphere 1",
         "visible": true,
         "locked": false,
         "position": [
-          2,
+          1,
           0,
           0
         ],
@@ -61,13 +61,13 @@
         "wireframe": false
       },
       {
-        "id": "cb6f2443-aa7a-4f15-abfe-7cf389d868d8",
+        "id": "a2b18aa6-9c7c-4724-93a3-bb815b5a1088",
         "type": "cylinder",
         "name": "Cylinder 1",
         "visible": true,
         "locked": false,
         "position": [
-          4,
+          2,
           0,
           0
         ],
@@ -86,13 +86,13 @@
         "wireframe": false
       },
       {
-        "id": "123c78c6-8799-4fea-b63e-44dff0df6558",
+        "id": "79e2cfd8-e620-4c59-b5aa-88215d8eda8c",
         "type": "cone",
         "name": "Cone 1",
         "visible": true,
         "locked": false,
         "position": [
-          0,
+          3,
           0,
           0
         ],
@@ -107,6 +107,31 @@
           1
         ],
         "color": "#ffff00",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
+        "id": "sphere-f0963d90-0014-43c8-914d-c6cc7e2468b1",
+        "type": "sphere",
+        "name": "Sphere 2",
+        "visible": true,
+        "locked": false,
+        "position": [
+          4,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "color": "#aa00ff",
         "opacity": 1,
         "wireframe": false
       }

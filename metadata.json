@@ -40,7 +40,7 @@
   },
   "@type": "sc:Dataset",
   "name": "GauntletBenchmark",
-  "description": "A multi-domain agent benchmark covering five task categories: Workflow Builder (n8n-style pipelines), 3D Modeller (Three.js scenes), Video Editor (browser-based timeline), Circuit Designer (CircuitJS), and Flight Analyser (ADS-B replay). Each category contains 20 tasks at easy, medium, and hard difficulty levels.",
+  "description": "A multi-domain agent benchmark covering five task categories: Workflow Builder (n8n-style pipelines), 3D Modeller (Three.js scenes), Video Editor (browser-based timeline), Circuit Designer (CircuitJS), and Flight Analyser (ADS-B replay). Each category contains 27 tasks: 9 easy, 9 medium, and 9 hard, for 135 tasks total.",
   "version": "1.0.0",
   "citeAs": "GauntletBenchmark v1.0.0",
   "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -55,13 +55,13 @@
       "description": "Workflow Builder tasks YAML.",
       "contentUrl": "tasks/workflow_builder.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "f37a791816854f61c6c9f055b1d9516de1a1a302a1f9f242b7ae447ba5cadd02"
+      "sha256": "16312fb1d50555664379c6b70ca0c01603fa40fbd39a65cd781c40897536050c"
     },
     {
       "@type": "http://mlcommons.org/croissant/FileSet",
       "@id": "workflow-builder-gt-fileset",
       "name": "workflow_builder_ground_truth_files",
-      "description": "Expected final workflow-graph state, one JSON file per task (task1.json–task20.json). Task number N corresponds to tc_graph_NNN. The gt field in the YAML is empty for Workflow Builder tasks; these files are the authoritative ground truth used by the evaluator.",
+      "description": "Expected final workflow-graph state, one JSON file per task (task1.json–task27.json). Task number N corresponds to tc_graph_NNN. The gt field in the YAML is empty for Workflow Builder tasks; these files are the authoritative ground truth used by the evaluator.",
       "encodingFormat": "application/json",
       "includes": "assets/graph_ground_truth/task*.json"
     },
@@ -73,13 +73,13 @@
       "description": "3D Modeller tasks YAML.",
       "contentUrl": "tasks/3d_modeller.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "9270592ccde109ac50cbf0c906f768a8effa3b60e5296a4cfec73d6b803bd496"
+      "sha256": "884c55567dcfd619214d7bf780c7a44942c8e3c6c18032ae0a750096032db700"
     },
     {
       "@type": "http://mlcommons.org/croissant/FileSet",
       "@id": "3d-modeller-gt-fileset",
       "name": "3d_modeller_ground_truth_files",
-      "description": "Expected final 3D scene state, one JSON file per task (task1.json–task20.json). Task number N corresponds to tc_3d_NNN. The gt field in the YAML is empty for 3D Modeller tasks; these files are the authoritative ground truth used by the evaluator.",
+      "description": "Expected final 3D scene state, one JSON file per task (task1.json–task27.json). Task number N corresponds to tc_3d_NNN. The gt field in the YAML is empty for 3D Modeller tasks; these files are the authoritative ground truth used by the evaluator.",
       "encodingFormat": "application/json",
       "includes": "assets/3d_ground_truth/task*.json"
     },
@@ -87,10 +87,10 @@
       "@type": "http://mlcommons.org/croissant/FileObject",
       "@id": "3d-modeller-tolerance-overrides",
       "name": "3d_modeller_tolerance_overrides",
-      "description": "JSON object mapping task numbers (string keys) to absolute numeric tolerances for floating-point scene-property comparison. Tasks absent from this file use the evaluator default tolerance. Currently overrides tasks 7 and 16 (tolerance 0.5).",
+      "description": "JSON object mapping task numbers (string keys) to absolute numeric tolerances for floating-point scene-property comparison. Tasks absent from this file use the evaluator default tolerance. Currently overrides tasks 14 and 23 (tolerance 0.5).",
       "contentUrl": "assets/3d_ground_truth/tolerance_overrides.json",
       "encodingFormat": "application/json",
-      "sha256": "076087b98448fc0f1a98a544f0093b690c3043df0ba18326a0c8bce2efbe8bc7"
+      "sha256": "0bae5efbac556c0a55361000f8363f2fe81b0ccfe360be304e1824819abed25d"
     },
 
     {
@@ -100,13 +100,13 @@
       "description": "Video Editor tasks YAML.",
       "contentUrl": "tasks/video_editor.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "808535693526e57b8542c8ede3c10b61b98d96e7fe9a63e4fc45f35d05f8d09a"
+      "sha256": "2a18973bf62b866e7b661fe7141dd24b456c4a6a10a8b0666c4599a3769ad914"
     },
     {
       "@type": "http://mlcommons.org/croissant/FileSet",
       "@id": "video-editor-gt-fileset",
       "name": "video_editor_ground_truth_files",
-      "description": "Expected editor-operations sequence, one JSON file per task (tc_vid_001.json–tc_vid_020.json). The filename matches the task id directly. The gt field in the YAML is empty for Video Editor tasks; these files are the authoritative ground truth used by the evaluator.",
+      "description": "Expected editor-operations sequence, one JSON file per task (tc_vid_001.json–tc_vid_027.json). The filename matches the task id directly. The gt field in the YAML is empty for Video Editor tasks; these files are the authoritative ground truth used by the evaluator.",
       "encodingFormat": "application/json",
       "includes": "assets/video_ground_truth/tc_vid_*.json"
     },
@@ -118,7 +118,7 @@
       "description": "Circuit Designer tasks YAML.",
       "contentUrl": "tasks/circuit_designer.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "6fabf7db1da8bc082eea67896328d12175b0c6b6ec6234721df7c08c0cc559c1"
+      "sha256": "c6bc6d4926c4fe8d7f70ee0504077f56a0b73b7c23bce842447d93269c13b2c7"
     },
 
     {
@@ -128,7 +128,7 @@
       "description": "Flight Analyser tasks YAML.",
       "contentUrl": "tasks/flight_analyser.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "4ef8f7a623732cf0d165f7df438aa5ed069a07c7e3c26ae24fb64759fd820c71"
+      "sha256": "678567afbdee3afe751dc7c49301e54d9c93f8dd619b9708529e0066eb08b7c8"
     }
 
   ],
@@ -137,14 +137,14 @@
       "@type": "ml:RecordSet",
       "@id": "workflow-builder-tasks",
       "name": "workflow_builder_tasks",
-      "description": "20 Workflow Builder tasks (7 easy, 6 medium, 7 hard) targeting n8n-style pipelines.",
+      "description": "27 Workflow Builder tasks (9 easy, 9 medium, 9 hard) targeting n8n-style pipelines.",
       "key": "workflow-builder-tasks/id",
       "field": [
         {
           "@type": "ml:Field",
           "@id": "workflow-builder-tasks/id",
           "name": "id",
-          "description": "Unique task identifier (tc_graph_001–tc_graph_020).",
+          "description": "Unique task identifier (tc_graph_001–tc_graph_027).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {"@id": "workflow-builder-file"},
@@ -194,14 +194,14 @@
       "@type": "ml:RecordSet",
       "@id": "3d-modeller-tasks",
       "name": "3d_modeller_tasks",
-      "description": "20 3D Modeller tasks (2 easy, 10 medium, 8 hard) targeting a Three.js-based scene editor.",
+      "description": "27 3D Modeller tasks (9 easy, 9 medium, 9 hard) targeting a Three.js-based scene editor.",
       "key": "3d-modeller-tasks/id",
       "field": [
         {
           "@type": "ml:Field",
           "@id": "3d-modeller-tasks/id",
           "name": "id",
-          "description": "Unique task identifier (tc_3d_001–tc_3d_020).",
+          "description": "Unique task identifier (tc_3d_001–tc_3d_027).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {"@id": "3d-modeller-file"},
@@ -251,14 +251,14 @@
       "@type": "ml:RecordSet",
       "@id": "video-editor-tasks",
       "name": "video_editor_tasks",
-      "description": "20 Video Editor tasks (2 easy, 9 medium, 9 hard) targeting a browser-based timeline editor.",
+      "description": "27 Video Editor tasks (9 easy, 9 medium, 9 hard) targeting a browser-based timeline editor.",
       "key": "video-editor-tasks/id",
       "field": [
         {
           "@type": "ml:Field",
           "@id": "video-editor-tasks/id",
           "name": "id",
-          "description": "Unique task identifier (tc_vid_001–tc_vid_020).",
+          "description": "Unique task identifier (tc_vid_001–tc_vid_027).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {"@id": "video-editor-file"},
@@ -308,14 +308,14 @@
       "@type": "ml:RecordSet",
       "@id": "circuit-designer-tasks",
       "name": "circuit_designer_tasks",
-      "description": "20 Circuit Designer tasks (2 easy, 9 medium, 9 hard) targeting CircuitJS. Tasks cover digital logic, analogue measurement, and sequential circuits.",
+      "description": "27 Circuit Designer tasks (9 easy, 9 medium, 9 hard) targeting CircuitJS. Tasks cover digital logic, analogue measurement, and sequential circuits.",
       "key": "circuit-designer-tasks/id",
       "field": [
         {
           "@type": "ml:Field",
           "@id": "circuit-designer-tasks/id",
           "name": "id",
-          "description": "Unique task identifier (tc_circuit_001–tc_circuit_020).",
+          "description": "Unique task identifier (tc_circuit_001–tc_circuit_027).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {"@id": "circuit-designer-file"},
@@ -361,14 +361,14 @@
       "@type": "ml:RecordSet",
       "@id": "flight-analyser-tasks",
       "name": "flight_analyser_tasks",
-      "description": "20 Flight Analyser tasks (2 easy, 9 medium, 9 hard) based on a fixed ADS-B replay session. Tasks require counting aircraft, detecting border crossings, tracking movements, and extracting telemetry.",
+      "description": "27 Flight Analyser tasks (9 easy, 9 medium, 9 hard) based on a fixed ADS-B replay session. Tasks require counting aircraft, detecting border crossings, tracking movements, and extracting telemetry.",
       "key": "flight-analyser-tasks/id",
       "field": [
         {
           "@type": "ml:Field",
           "@id": "flight-analyser-tasks/id",
           "name": "id",
-          "description": "Unique task identifier (tc_frad_001–tc_frad_020).",
+          "description": "Unique task identifier (tc_frad_001–tc_frad_027).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {"@id": "flight-analyser-file"},

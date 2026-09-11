@@ -1,50 +1,40 @@
 {
-  "id": "2fbabb97-2dde-4f8c-8007-2f274492eef0",
-  "name": "Untitled Scene",
-  "createdAt": 1775569184055,
-  "updatedAt": 1775569254761,
-  "version": 1,
-  "metadata": {
-    "description": "",
-    "thumbnail": null
-  },
+  "name": "Geometric Garden",
   "scene": {
     "objects": [
       {
-        "id": "cube-f4350633-8610-4970-a675-f394e8a7da07",
         "type": "cube",
-        "name": "Cube",
+        "name": "Stone Block",
         "visible": true,
         "locked": false,
         "position": [
-          1,
-          1,
-          -1
+          0,
+          0.5,
+          0
         ],
         "rotation": [
           0,
-          0,
+          45,
           0
         ],
         "scale": [
+          1.5,
           1,
-          1,
-          1
+          1.5
         ],
-        "color": "#ffffff",
+        "color": "#888888",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "cube-120bf011-6260-4123-810c-8781d09dff67",
-        "type": "cube",
-        "name": "Cube",
+        "type": "sphere",
+        "name": "Garden Ball",
         "visible": true,
         "locked": false,
         "position": [
-          1,
-          -1,
-          1
+          3,
+          0.75,
+          0
         ],
         "rotation": [
           0,
@@ -52,24 +42,23 @@
           0
         ],
         "scale": [
-          1,
-          1,
-          1
+          1.5,
+          1.5,
+          1.5
         ],
-        "color": "#ffffff",
+        "color": "#66aa44",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "cube-7201d086-9ae4-47ba-a8e7-a93413fad0cd",
-        "type": "cube",
-        "name": "Cube",
+        "type": "cylinder",
+        "name": "Pillar",
         "visible": true,
         "locked": false,
         "position": [
+          -3,
           1,
-          -1,
-          -1
+          0
         ],
         "rotation": [
           0,
@@ -77,24 +66,23 @@
           0
         ],
         "scale": [
-          1,
-          1,
-          1
+          0.5,
+          2,
+          0.5
         ],
-        "color": "#ffffff",
+        "color": "#ddccaa",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "cube-deec9087-bd56-48fc-adbe-1749d44a0297",
-        "type": "cube",
-        "name": "Cube",
+        "type": "cone",
+        "name": "Tree Top",
         "visible": true,
         "locked": false,
         "position": [
-          -1,
+          0,
           1,
-          1
+          3
         ],
         "rotation": [
           0,
@@ -102,27 +90,26 @@
           0
         ],
         "scale": [
-          1,
-          1,
-          1
+          1.5,
+          2,
+          1.5
         ],
-        "color": "#ffffff",
+        "color": "#228833",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "cube-00b889d1-99d0-416c-879a-e1d2efb2f9d6",
-        "type": "cube",
-        "name": "Cube",
+        "type": "torus",
+        "name": "Ring",
         "visible": true,
         "locked": false,
         "position": [
-          -1,
-          1,
-          -1
+          0,
+          1.5,
+          -3
         ],
         "rotation": [
-          0,
+          90,
           0,
           0
         ],
@@ -131,82 +118,7 @@
           1,
           1
         ],
-        "color": "#ffffff",
-        "opacity": 1,
-        "wireframe": false
-      },
-      {
-        "id": "cube-57a17854-fce3-4c23-b08a-cddd5b13f37c",
-        "type": "cube",
-        "name": "Cube",
-        "visible": true,
-        "locked": false,
-        "position": [
-          -1,
-          -1,
-          1
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ],
-        "color": "#ffffff",
-        "opacity": 1,
-        "wireframe": false
-      },
-      {
-        "id": "cube-30c69e15-0dbc-402e-b0be-0ec4e441ba64",
-        "type": "cube",
-        "name": "Cube",
-        "visible": true,
-        "locked": false,
-        "position": [
-          1,
-          1,
-          1
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ],
-        "color": "#ffffff",
-        "opacity": 1,
-        "wireframe": false
-      },
-      {
-        "id": "cube-83c14262-b08d-4931-8efd-97d4da06b208",
-        "type": "cube",
-        "name": "Cube",
-        "visible": true,
-        "locked": false,
-        "position": [
-          -1,
-          -1,
-          -1
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ],
-        "color": "#ffffff",
+        "color": "#cc8844",
         "opacity": 1,
         "wireframe": false
       }

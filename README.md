@@ -2,21 +2,21 @@
 
 A multi-domain agent benchmark covering five interactive web applications: **Workflow Builder** (n8n-style pipelines), **3D Modeller** (Three.js scenes), **Video Editor** (browser-based timeline), **Circuit Designer** (CircuitJS), and **Flight Analyser** (ADS-B replay).
 
-Each application contributes 20 tasks at a mix of *easy*, *medium*, and *hard* difficulties, for a total of **100 tasks**. Tasks ask the agent to perform a goal-oriented sequence of UI actions and report a structured JSON answer; the answer (and, where applicable, the resulting application state) is then compared against an authoritative ground truth.
+Each application contributes 27 tasks at a mix of *easy*, *medium*, and *hard* difficulties, for a total of **135 tasks**. Tasks ask the agent to perform a goal-oriented sequence of UI actions and report a structured JSON answer; the answer (and, where applicable, the resulting application state) is then compared against an authoritative ground truth.
 
 This repository contains only the dataset — task prompts, ground truth, and a [Croissant](http://mlcommons.org/croissant/) metadata descriptor. The evaluation harness is hosted separately.
 
 ## Applications
 
-All five YAMLs follow the same shape (20 tasks each, split 2 easy / 9 medium / 9 hard):
+All five YAMLs follow the same shape (27 tasks each, split 9 easy / 9 medium / 9 hard):
 
 | Application      | Tasks file                       | Ground truth                 | Task IDs                |
 | ---------------- | -------------------------------- | ---------------------------- | ----------------------- |
-| Workflow Builder | `tasks/workflow_builder.yaml`    | `assets/graph_ground_truth/` | `tc_graph_001`–`020`    |
-| 3D Modeller      | `tasks/3d_modeller.yaml`         | `assets/3d_ground_truth/`    | `tc_3d_001`–`020`       |
-| Video Editor     | `tasks/video_editor.yaml`        | `assets/video_ground_truth/` | `tc_vid_001`–`020`      |
-| Circuit Designer | `tasks/circuit_designer.yaml`    | inline (`gt` field)          | `tc_circuit_001`–`020`  |
-| Flight Analyser  | `tasks/flight_analyser.yaml`     | inline (`gt` field)          | `tc_frad_001`–`020`     |
+| Workflow Builder | `tasks/workflow_builder.yaml`    | `assets/graph_ground_truth/` | `tc_graph_001`–`027`    |
+| 3D Modeller      | `tasks/3d_modeller.yaml`         | `assets/3d_ground_truth/`    | `tc_3d_001`–`027`       |
+| Video Editor     | `tasks/video_editor.yaml`        | `assets/video_ground_truth/` | `tc_vid_001`–`027`      |
+| Circuit Designer | `tasks/circuit_designer.yaml`    | inline (`gt` field)          | `tc_circuit_001`–`027`  |
+| Flight Analyser  | `tasks/flight_analyser.yaml`     | inline (`gt` field)          | `tc_frad_001`–`027`     |
 
 ## Layout
 
@@ -30,9 +30,9 @@ All five YAMLs follow the same shape (20 tasks each, split 2 easy / 9 medium / 9
 │   ├── video_editor.yaml
 │   └── workflow_builder.yaml
 └── assets/
-    ├── 3d_ground_truth/           # task1.json … task20.json + tolerance_overrides.json
-    ├── graph_ground_truth/        # task1.json … task20.json
-    └── video_ground_truth/        # tc_vid_001.json … tc_vid_020.json
+    ├── 3d_ground_truth/           # task1.json … task27.json + tolerance_overrides.json
+    ├── graph_ground_truth/        # task1.json … task27.json
+    └── video_ground_truth/        # tc_vid_001.json … tc_vid_027.json
 ```
 
 ## Task schema
@@ -78,9 +78,11 @@ Two patterns are used depending on what the task asks for:
 
   (Leading zeros are stripped when forming `taskN.json` for Workflow Builder and 3D Modeller.)
 
+  Ground-truth files are available for all 27 tasks in each of these three applications.
+
 ### 3D Modeller tolerances
 
-Floating-point scene properties are compared with a default absolute tolerance. Two tasks (numbers 7 and 16) override that default; the per-task values live in `assets/3d_ground_truth/tolerance_overrides.json`. Tasks not listed there fall back to the evaluator's default.
+Floating-point scene properties are compared with a default absolute tolerance. Two tasks (numbers 14 and 23) override that default; the per-task values live in `assets/3d_ground_truth/tolerance_overrides.json`. Tasks not listed there fall back to the evaluator's default.
 
 ## Loading
 

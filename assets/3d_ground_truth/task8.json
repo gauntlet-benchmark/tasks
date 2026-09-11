@@ -1,49 +1,39 @@
 {
-  "id": "bb8271d5-145b-4eeb-9f3a-2d4740f49583",
-  "name": "Four Objects Scene",
-  "createdAt": 1776771813379,
-  "updatedAt": 1776771813379,
-  "version": 1,
-  "metadata": {
-    "description": "",
-    "thumbnail": null
-  },
+  "name": "Geometric Garden",
   "scene": {
     "objects": [
       {
-        "id": "f1fcc6d4-690a-44f3-aeb8-d6fc67a50b87",
         "type": "cube",
-        "name": "Cube 1",
+        "name": "Stone Block",
         "visible": true,
         "locked": false,
         "position": [
           0,
-          10,
+          0.5,
           0
         ],
         "rotation": [
           0,
-          0,
+          45,
           0
         ],
         "scale": [
+          1.5,
           1,
-          20,
-          1
+          1.5
         ],
-        "color": "#ffffff",
+        "color": "#888888",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "46601716-bea7-4fe5-9455-58af145ef528",
         "type": "sphere",
-        "name": "Sphere 1",
+        "name": "Garden Ball",
         "visible": true,
         "locked": false,
         "position": [
           3,
-          0,
+          0.75,
           0
         ],
         "rotation": [
@@ -52,23 +42,22 @@
           0
         ],
         "scale": [
-          1,
-          1,
-          1
+          1.5,
+          1.5,
+          1.5
         ],
-        "color": "#ffffff",
+        "color": "#66aa44",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "588b95c1-6b02-4e23-b1be-68bb3ecb2c7c",
         "type": "cylinder",
-        "name": "Cylinder 1",
+        "name": "Pillar",
         "visible": true,
         "locked": false,
         "position": [
           -3,
-          0,
+          1,
           0
         ],
         "rotation": [
@@ -77,24 +66,23 @@
           0
         ],
         "scale": [
-          1,
-          1,
-          1
+          0.5,
+          2,
+          0.5
         ],
-        "color": "#ffffff",
+        "color": "#ddccaa",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "2032c303-9983-4cb8-8a65-04b0205abbd6",
         "type": "cone",
-        "name": "Cone 1",
+        "name": "Tree Top",
         "visible": true,
         "locked": false,
         "position": [
           0,
-          20.5,
-          0
+          2.5,
+          3
         ],
         "rotation": [
           0,
@@ -102,11 +90,11 @@
           0
         ],
         "scale": [
-          1,
-          1,
-          1
+          1.5,
+          2,
+          1.5
         ],
-        "color": "#ffffff",
+        "color": "#228833",
         "opacity": 1,
         "wireframe": false
       }
@@ -116,7 +104,7 @@
       "showAxes": true,
       "backgroundColor": "#1a1a2e",
       "fov": 50,
-      "cameraType": "orthographic",
+      "cameraType": "perspective",
       "orthoZoom": 10
     }
   }

@@ -1,79 +1,64 @@
 {
-  "id": "555243dc-a96a-426b-8c73-85f49c355ffe",
-  "name": "Range → Map → Table",
-  "createdAt": 1777051445875,
-  "updatedAt": 1777051522960,
+  "id": "44f140ac-d74f-45b3-b74f-627794e6619e",
+  "name": "Webhook Echo",
+  "createdAt": 1785568446123,
+  "updatedAt": 1785568522418,
   "version": 1,
   "metadata": {
     "description": "",
-    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgNjI4IDY0Jz48bGluZSB4MT0nNjAnIHkxPSczNicgeDI9JzI3MCcgeTI9JzM2JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48bGluZSB4MT0nMzEwJyB5MT0nMzYnIHgyPSc2MDgnIHkyPSc2MCcgc3Ryb2tlPScjNjQ3NDhiJyBzdHJva2Utd2lkdGg9JzInIC8+PHJlY3QgeD0nMjAnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzI2JyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPnJhbmdlR2VuZXJhdDwvdGV4dD48cmVjdCB4PScyNzAnIHk9JzIwJyB3aWR0aD0nODAnIGhlaWdodD0nMzInIHJ4PSc0JyBmaWxsPScjM2I4MmY2JyBvcGFjaXR5PScwLjg1JyAvPjx0ZXh0IHg9JzI3NicgeT0nNDAnIGZvbnQtc2l6ZT0nMTAnIGZpbGw9J3doaXRlJz5tYXA8L3RleHQ+PHJlY3QgeD0nNjA4JyB5PSc0NCcgd2lkdGg9JzgwJyBoZWlnaHQ9JzMyJyByeD0nNCcgZmlsbD0nIzNiODJmNicgb3BhY2l0eT0nMC44NScgLz48dGV4dCB4PSc2MTQnIHk9JzY0JyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+ZmlsdGVyPC90ZXh0Pjwvc3ZnPg=="
+    "thumbnail": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyODAnIGhlaWdodD0nMTYwJyB2aWV3Qm94PScwIDAgNDcyIDYwJz48bGluZSB4MT0nNjAnIHkxPSc1MicgeDI9JzQ1MicgeTI9JzM2JyBzdHJva2U9JyM2NDc0OGInIHN0cm9rZS13aWR0aD0nMicgLz48cmVjdCB4PScyMCcgeT0nMzYnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nMjYnIHk9JzU2JyBmb250LXNpemU9JzEwJyBmaWxsPSd3aGl0ZSc+d2ViaG9va1RyaWdnPC90ZXh0PjxyZWN0IHg9JzQ1MicgeT0nMjAnIHdpZHRoPSc4MCcgaGVpZ2h0PSczMicgcng9JzQnIGZpbGw9JyMzYjgyZjYnIG9wYWNpdHk9JzAuODUnIC8+PHRleHQgeD0nNDU4JyB5PSc0MCcgZm9udC1zaXplPScxMCcgZmlsbD0nd2hpdGUnPnJlc3BvbmRUb1dlYjwvdGV4dD48L3N2Zz4="
   },
   "graph": {
     "nodes": [
       {
-        "id": "n1",
-        "type": "rangeGenerator",
+        "id": "7bee5f8f-281d-494a-bec1-5738962e5a7b",
+        "type": "webhookTrigger",
         "position": {
-          "x": 100,
-          "y": 200
+          "x": 192,
+          "y": 304
         },
         "data": {
-          "start": 1,
-          "stop": 5,
-          "step": 1
+          "method": "GET",
+          "path": "/hook/echo"
         },
-        "width": 150,
-        "height": 22,
-        "selected": false,
-        "dragging": false
-      },
-      {
-        "id": "n2",
-        "type": "map",
-        "position": {
-          "x": 350,
-          "y": 200
-        },
-        "data": {
-          "expression": "{ squared: item.value * item.value }"
-        },
-        "width": 303,
+        "width": 348,
         "height": 141,
         "selected": false,
+        "positionAbsolute": {
+          "x": 192,
+          "y": 304
+        },
         "dragging": false
       },
       {
-        "id": "87f20171-2889-41d7-8fc2-a90da6eba98b",
-        "type": "filter",
+        "id": "15b44c8c-ed6a-4ace-8a2d-1fce90244d25",
+        "type": "respondToWebhook",
         "position": {
-          "x": 688,
-          "y": 224
+          "x": 624,
+          "y": 288
         },
         "data": {
-          "predicate": "item.value > 10"
+          "statusCode": 404,
+          "body": "",
+          "headers": {}
         },
-        "width": 312,
+        "width": 370,
         "height": 141,
         "selected": true,
-        "dragging": false,
         "positionAbsolute": {
-          "x": 688,
-          "y": 224
-        }
+          "x": 624,
+          "y": 288
+        },
+        "dragging": false
       }
     ],
     "edges": [
       {
-        "id": "e1",
-        "source": "n1",
-        "target": "n2"
-      },
-      {
-        "source": "n2",
-        "sourceHandle": null,
-        "target": "87f20171-2889-41d7-8fc2-a90da6eba98b",
+        "source": "7bee5f8f-281d-494a-bec1-5738962e5a7b",
+        "sourceHandle": "trigger",
+        "target": "15b44c8c-ed6a-4ace-8a2d-1fce90244d25",
         "targetHandle": null,
-        "id": "reactflow__edge-n2-87f20171-2889-41d7-8fc2-a90da6eba98b"
+        "id": "reactflow__edge-7bee5f8f-281d-494a-bec1-5738962e5a7btrigger-15b44c8c-ed6a-4ace-8a2d-1fce90244d25"
       }
     ]
   }

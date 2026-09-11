@@ -1,143 +1,107 @@
 {
-  "scenario": 6,
-  "endpoint_content": {
   "operations": [
     {
       "type": "MEDIA_UPLOAD",
       "data": {
-        "filename": "White Candle.webm",
-        "mediaId": "93eb0108-eac1-4c37-9e17-351f473e6094",
+        "filename": "Tuning a Radio.webm",
+        "mediaId": "34047f86-f2fc-4e1d-b4d2-589a8a1295b7",
         "mediaType": "VIDEO",
-        "duration": 41766
+        "duration": 9051
       },
-      "timestamp": 1776794714252
+      "timestamp": 1785533502939
     },
     {
       "type": "TIMELINE_ADD",
       "data": {
-        "mediaId": "93eb0108-eac1-4c37-9e17-351f473e6094",
-        "mediaName": "White Candle.webm",
-        "elementId": "7f1d539e-5625-49db-b31b-da499109074a",
+        "mediaId": "34047f86-f2fc-4e1d-b4d2-589a8a1295b7",
+        "mediaName": "Tuning a Radio.webm",
+        "elementId": "d5980d49-c4af-4e3c-8a64-2d5709bd4418",
         "trackIndex": 0,
         "startTime": 0,
-        "duration": 41766
+        "duration": 9051
       },
-      "timestamp": 1776794715570
+      "timestamp": 1785533504530
     },
     {
       "type": "TIMELINE_MOVE",
       "data": {
-        "elementId": "7f1d539e-5625-49db-b31b-da499109074a",
-        "mediaName": "White Candle.webm",
+        "elementId": "d5980d49-c4af-4e3c-8a64-2d5709bd4418",
+        "mediaName": "Tuning a Radio.webm",
         "prevTrackIndex": 0,
         "newTrackIndex": 0,
         "prevStartTime": 0,
         "newStartTime": 0
       },
-      "timestamp": 1776794718880
+      "timestamp": 1785533512586
     },
     {
       "type": "TIMELINE_SPLIT",
       "data": {
-        "elementId": "7f1d539e-5625-49db-b31b-da499109074a",
-        "mediaName": "White Candle.webm",
-        "leftElementId": "7f1d539e-5625-49db-b31b-da499109074a",
-        "rightElementId": "81e41b98-fbb7-4620-9a97-cbb6476fcaa8",
-        "splitTimeMs": 4025
+        "elementId": "d5980d49-c4af-4e3c-8a64-2d5709bd4418",
+        "mediaName": "Tuning a Radio.webm",
+        "leftElementId": "d5980d49-c4af-4e3c-8a64-2d5709bd4418",
+        "rightElementId": "025d5b77-f2e3-42a3-b8e0-711245b260ad",
+        "splitTimeMs": 5000
       },
-      "timestamp": 1776794719587
+      "timestamp": 1785533514117
     },
     {
       "type": "TIMELINE_MOVE",
       "data": {
-        "elementId": "81e41b98-fbb7-4620-9a97-cbb6476fcaa8",
-        "mediaName": "White Candle.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 4025,
-        "newStartTime": 4025
-      },
-      "timestamp": 1776794723037
-    },
-    {
-      "type": "TIMELINE_SPLIT",
-      "data": {
-        "elementId": "81e41b98-fbb7-4620-9a97-cbb6476fcaa8",
-        "mediaName": "White Candle.webm",
-        "leftElementId": "81e41b98-fbb7-4620-9a97-cbb6476fcaa8",
-        "rightElementId": "310f511d-0cf7-41a2-af21-3a58637b9245",
-        "splitTimeMs": 10975
-      },
-      "timestamp": 1776794724099
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "7f1d539e-5625-49db-b31b-da499109074a",
-        "mediaName": "White Candle.webm",
+        "elementId": "d5980d49-c4af-4e3c-8a64-2d5709bd4418",
+        "mediaName": "Tuning a Radio.webm",
         "prevTrackIndex": 0,
         "newTrackIndex": 0,
         "prevStartTime": 0,
         "newStartTime": 0
       },
-      "timestamp": 1776794724667
+      "timestamp": 1785533514868
     },
     {
       "type": "TIMELINE_DELETE",
       "data": {
-        "elementId": "7f1d539e-5625-49db-b31b-da499109074a",
-        "mediaName": "White Candle.webm",
+        "elementId": "d5980d49-c4af-4e3c-8a64-2d5709bd4418",
+        "mediaName": "Tuning a Radio.webm",
         "trackIndex": 0,
         "startTime": 0,
-        "duration": 4025
+        "duration": 5000
       },
-      "timestamp": 1776794726019
+      "timestamp": 1785533516021
     },
     {
       "type": "TIMELINE_MOVE",
       "data": {
-        "elementId": "310f511d-0cf7-41a2-af21-3a58637b9245",
-        "mediaName": "White Candle.webm",
-        "prevTrackIndex": 0,
-        "newTrackIndex": 0,
-        "prevStartTime": 10975,
-        "newStartTime": 10975
-      },
-      "timestamp": 1776794726819
-    },
-    {
-      "type": "TIMELINE_DELETE",
-      "data": {
-        "elementId": "310f511d-0cf7-41a2-af21-3a58637b9245",
-        "mediaName": "White Candle.webm",
-        "trackIndex": 0,
-        "startTime": 10975,
-        "duration": 30791
-      },
-      "timestamp": 1776794727803
-    },
-    {
-      "type": "TIMELINE_MOVE",
-      "data": {
-        "elementId": "81e41b98-fbb7-4620-9a97-cbb6476fcaa8",
-        "mediaName": "White Candle.webm",
+        "elementId": "025d5b77-f2e3-42a3-b8e0-711245b260ad",
+        "mediaName": "Tuning a Radio.webm",
         "prevTrackIndex": 0,
         "newTrackIndex": 0,
         "prevStartTime": 0,
         "newStartTime": 0
       },
-      "timestamp": 1776794729205
+      "timestamp": 1785533518697
+    },
+    {
+      "type": "TIMELINE_MOVE",
+      "data": {
+        "elementId": "025d5b77-f2e3-42a3-b8e0-711245b260ad",
+        "mediaName": "Tuning a Radio.webm",
+        "prevTrackIndex": 0,
+        "newTrackIndex": 0,
+        "prevStartTime": 0,
+        "newStartTime": 0
+      },
+      "timestamp": 1785533520931
     },
     {
       "type": "EXPORT_COMPLETE",
       "data": {
-        "finalDurationMs": 6950,
+        "finalDurationMs": 4051,
         "trackCount": 1,
         "sourceMedia": [
           {
-            "filename": "White Candle.webm",
+            "filename": "Tuning a Radio.webm",
             "mediaType": "VIDEO",
-            "originalDurationMs": 41766
+            "originalDurationMs": 9051
           }
         ],
         "timeline": [
@@ -148,21 +112,20 @@
             },
             "elements": [
               {
-                "elementId": "81e41b98-fbb7-4620-9a97-cbb6476fcaa8",
-                "mediaName": "White Candle.webm",
+                "elementId": "025d5b77-f2e3-42a3-b8e0-711245b260ad",
+                "mediaName": "Tuning a Radio.webm",
                 "mediaType": "VIDEO",
                 "startTimeMs": 0,
-                "durationMs": 6950,
-                "trimFromStartMs": 4025,
-                "trimFromEndMs": 30791,
+                "durationMs": 4051,
+                "trimFromStartMs": 5000,
+                "trimFromEndMs": 0,
                 "activeEffectsAtStart": []
               }
             ]
           }
         ]
       },
-      "timestamp": 1776794735572
+      "timestamp": 1785533539280
     }
   ]
-}
 }

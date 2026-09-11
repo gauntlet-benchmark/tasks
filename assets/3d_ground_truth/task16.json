@@ -1,29 +1,40 @@
 {
-  "id": "997d560e-fb4a-474a-966e-60645619812b",
-  "name": "Single Cube Scene",
-  "createdAt": 1775565851247,
-  "updatedAt": 1775567373003,
-  "version": 1,
-  "metadata": {
-    "description": "",
-    "thumbnail": null
-  },
+  "name": "Two Objects Scene",
   "scene": {
     "objects": [
       {
-        "id": "d8559bd2-e5a7-46d2-8c48-31b7cb15f23c",
+        "type": "cylinder",
+        "name": "Cylinder 1",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "color": "#ffffff",
+        "opacity": 1,
+        "wireframe": false
+      },
+      {
         "type": "cube",
         "name": "Cube 1",
-        "visible": true,
-        "locked": false,
         "position": [
+          3,
           0,
-          1.5,
           0
         ],
         "rotation": [
           0,
-          45,
+          0,
           0
         ],
         "scale": [
@@ -31,24 +42,21 @@
           1,
           1
         ],
-        "color": "#ff6600",
+        "color": "#ff0000",
         "opacity": 1,
         "wireframe": false
       },
       {
-        "id": "cube-97401a3a-9b59-41e1-83df-fe4f8f8e9195",
         "type": "cube",
         "name": "Cube 2",
-        "visible": true,
-        "locked": false,
         "position": [
+          -3,
           0,
-          0.5,
           0
         ],
         "rotation": [
           0,
-          45,
+          0,
           0
         ],
         "scale": [
@@ -56,32 +64,7 @@
           1,
           1
         ],
-        "color": "#0000ff",
-        "opacity": 1,
-        "wireframe": false
-      },
-      {
-        "id": "cube-e0257113-9b0b-445e-b5e4-8d37097a98de",
-        "type": "cube",
-        "name": "Cube 3",
-        "visible": true,
-        "locked": false,
-        "position": [
-          0,
-          2.5,
-          0
-        ],
-        "rotation": [
-          0,
-          45,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ],
-        "color": "#00ff00",
+        "color": "#ff0000",
         "opacity": 1,
         "wireframe": false
       }
